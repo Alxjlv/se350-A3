@@ -16,11 +16,15 @@ header {
 main {
   display: grid;
   grid-template-columns: 350px minmax(350px, auto) 350px;
-  grid-template-rows: 200px auto;
+  grid-template-rows: 150px auto;
   align-content: stretch;
   height: 100vh;
   padding-top: 60px;
   z-index: 0;
+}
+
+.column {
+  overflow-y: auto;
 }
 
 .row-timeline {
