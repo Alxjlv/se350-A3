@@ -3,3 +3,35 @@ body {
   color: #222;
   background-color: #FFF;
 }
+
+main {
+  display: grid;
+  grid-template-columns: 350px minmax(350px, auto) 350px;
+  grid-template-rows: 200px auto;
+  align-content: stretch;
+  height: 100vh;
+}
+
+.row-timeline {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  background-color: #F0F;
+}
+
+.col-folders {
+  grid-column: 1;
+  grid-row: 2;
+  background-color: #F00;
+}
+
+.col-files {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: #0F0;
+}
+
+.col-details {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  background-color: #00F;
+}
