@@ -115,7 +115,7 @@ main {
 }
 
 .col-files {
-  background-color: #0F0;
+  border-left: 1px solid #9e9e9e;
   grid-column: 2;
   grid-row: 2;
 }
@@ -209,4 +209,98 @@ main {
 
 .folders-btn-icon {
   padding-right: 16px;
+}
+
+/*------------------------------------*\
+    #FILES
+\*------------------------------------*/
+
+.file-card {
+  border: 1px solid #9e9e9e;
+  border-radius: 4px;
+  display: inline-grid;
+  grid-template-columns: 120px auto;
+  grid-template-rows: repeat(3, 33.33%);
+  height: 122px;
+  margin: 0 8px 12px 0px;
+  width: 380px;
+}
+
+.file-img {
+  border-right: 1px solid #9e9e9e;
+  grid-column: 1;
+  grid-row: 1 / 4;
+}
+
+.file-img > img {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.file-header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.9rem;
+  font-weight: bold;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.file-header-ppl {
+  align-items: center;
+  display: flex;
+}
+
+.file-progress {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  white-space: nowrap;
+}
+
+.file-prog-bar {
+  background-color: #a6ccff;
+  border-radius: 3px;
+  height: 6px;
+  margin: 0 8px;
+  position: relative;
+  width: 100%;
+}
+
+.file-prog-icon {
+  color: #444;
+}
+
+.file-prog-bar-fill {
+  background-color: #1a73e8;
+  border-radius: 3px;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.file-tag-area {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 8px;
+}
+
+.file-tag {
+  background-color: #1a73e8;
+  border-radius: 4px;
+  color: #fff;
+  margin-left: 6px;
+  padding: 1px 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.file-tag-1 {
+  background-color: #d32f2f;
 }
