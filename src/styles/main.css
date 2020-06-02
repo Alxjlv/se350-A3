@@ -25,13 +25,14 @@ header {
   background-color: #343a40;
   color: #fff;
   display: flex;
+  justify-content: space-between;
   position: fixed;
   width: 100%;
   height: 60px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.28);
 }
 
-.logo-area {
+.nav-zone {
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -59,6 +60,16 @@ header {
 .nav-dropdown > option {
   background-color: #fff;
   color: #222;
+}
+
+.nav-search {
+  background-color: rgba(158, 158, 158, 0.2);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  flex-grow: 1;
+  font: 1rem Roboto;
+  padding: 12px;
 }
 
 main {
