@@ -164,6 +164,7 @@ header {
 }
 
 .nav-btn {
+  border: none;
   color: #fff;
 }
 
