@@ -188,10 +188,10 @@ main {
 }
 
 /*------------------------------------*\
-    #FOLDERS
+    #TAGS
 \*------------------------------------*/
 
-.folders-list {
+.tags-list {
   align-content: stretch;
   display: flex;
   flex-direction: column;
@@ -199,11 +199,11 @@ main {
   padding: 0;
 }
 
-.folders-item {
+.tags-item {
   margin-bottom: 12px;
 }
 
-.folders-btn {
+.tags-btn {
   background-color: #fff;
   border: 1px solid #9e9e9e;
   font-size: 0.9rem;
@@ -211,8 +211,13 @@ main {
   width: 100%;
 }
 
-.folders-btn-icon {
+.tags-btn-icon {
   padding-right: 16px;
+}
+
+.tags-btn-last {
+  height: 50px;
+  padding-left: 52px;
 }
 
 /*------------------------------------*\
