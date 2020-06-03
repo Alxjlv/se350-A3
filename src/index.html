@@ -75,49 +75,49 @@
           <h2>Tags</h2>
           <ul class="tags-list">
             <li class="tags-item">
-              <button class="tags-btn">
+              <button class="tags-btn" onclick="showAllFiles()">
                 <i class="fa fa-tags fa-lg" aria-hidden="true" style="padding-right: 13px;"></i>
                 Show all
               </button>
             </li>
             <li class="tags-item">
-              <button class="tags-btn">
+              <button class="tags-btn" onclick="showTagFiles('code')">
                 <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #1a73e8;"></i>
                 Code
               </button>
             </li>
             <li class="tags-item">
-              <button class="tags-btn">
+              <button class="tags-btn" onclick="showTagFiles('deliverable')">
                 <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #7b1fa2;"></i>
                 Deliverable
               </button>
             </li>
             <li class="tags-item">
-              <button class="tags-btn">
+              <button class="tags-btn" onclick="showTagFiles('asset')">
                 <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #0097a7;"></i>
                 Asset
               </button>
             </li>
             <li class="tags-item">
-              <button class="tags-btn">
+              <button class="tags-btn" onclick="showTagFiles('in-progress')">
                 <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #ffa000;"></i>
                 In progress
               </button>
             </li>
             <li class="tags-item">
-              <button class="tags-btn">
+              <button class="tags-btn" onclick="showTagFiles('needs-review')">
                 <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #d32f2f;"></i>
                 Needs review
               </button>
             </li>
             <li class="tags-item">
-              <button class="tags-btn">
+              <button class="tags-btn" onclick="showTagFiles('done')">
                 <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #388e3c;"></i>
                 Done
               </button>
             </li>
             <li class="tags-item">
-              <button class="tags-btn tags-btn-last">
+              <button class="tags-btn tags-btn-last" onclick="showTagFiles('untagged')">
                 Untagged
               </button>
             </li>
@@ -225,6 +225,6 @@
         Column 3
       </section>
     </main>
-    <scipt src="app.js"></scipt>
+    <script src="app.js"></script>
   </body>
 </html>
