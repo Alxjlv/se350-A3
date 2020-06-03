@@ -220,6 +220,11 @@ main {
   padding-left: 52px;
 }
 
+.tags-btn__selected {
+  background-color: #e8f0fe;
+  border: 1px solid #1a73e8;
+}
+
 /*------------------------------------*\
     #FILES
 \*------------------------------------*/
@@ -227,6 +232,7 @@ main {
 .file-card {
   border: 1px solid #9e9e9e;
   border-radius: 4px;
+  cursor: pointer;
   display: inline-grid;
   grid-template-columns: 121px auto;
   grid-template-rows: repeat(3, 1fr);
