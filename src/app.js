@@ -1,4 +1,4 @@
-const tags = {
+const tagFiles = {
     "code": [
         "index.html"
     ],
@@ -18,6 +18,7 @@ const tags = {
     "untagged": null
 }
 
+const tags = document.querySelectorAll(".tags-btn")
 const files = document.querySelectorAll(".file-card");
 
 function showAllFiles() {
@@ -28,12 +29,21 @@ function hideAllFiles() {
     files.forEach(file => {file.style.display = 'none'});
 }
 
-function showTagFiles(tag) {
+function clearTags() {
+    tags.forEach(tag => {tag.classList.remove("tags-btn__selected")});
+}
+
+function showTagFiles(tagId) {
     hideAllFiles();
-    var tagId = tag.id;
-    if (tags[tagId] != null) {
-        tags[tagId].forEach(fileId=> {
+    if (tagFiles[tagId] != null) {
+        tagFiles[tagId].forEach(fileId=> {
             document.getElementById(fileId).style.display = 'inline-grid'
         });
     }
+}
+
+function selectTag(tag) {
+    clearTags();
+    tag.classList.add("tags-btn__selected");
+    showTagFiles(tag.id);
 }
