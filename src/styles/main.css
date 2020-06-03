@@ -219,20 +219,38 @@ main {
   border: 1px solid #9e9e9e;
   border-radius: 4px;
   display: inline-grid;
-  grid-template-columns: 120px auto;
-  grid-template-rows: repeat(3, 33.33%);
+  grid-template-columns: 121px auto;
+  grid-template-rows: repeat(3, 1fr);
   height: 122px;
   margin: 0 8px 12px 0px;
+  transition: ease 0.3s;
   width: 380px;
 }
 
+.file-card:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.28);
+  transition: ease 0.3s;
+}
+
+.file-card__selected {
+  background-color: #e8f0fe;
+  border: 1px solid #1a73e8;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.35);
+}
+
+.file-card__selected:hover {
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.35);
+}
+
 .file-img {
+  border: none;
   border-right: 1px solid #9e9e9e;
   grid-column: 1;
   grid-row: 1 / 4;
 }
 
 .file-img > img {
+  border-radius: 3px 0 0 3px;
   display: block;
   max-height: 100%;
   max-width: 100%;
@@ -244,6 +262,8 @@ main {
   flex-direction: row;
   font-size: 0.9rem;
   font-weight: bold;
+  grid-column: 2;
+  grid-row: 1;
   justify-content: space-between;
   padding: 10px;
 }
@@ -253,10 +273,27 @@ main {
   display: flex;
 }
 
+.file-person-icon {
+  background-color: #dfe1e6;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  height: 24px;
+  margin-left: 4px;
+  width: 24px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.file-person-name {
+  z-index: 2;
+}
+
 .file-progress {
   align-items: center;
   display: flex;
   flex-direction: row;
+  grid-column: 2;
+  grid-row: 2;
   padding: 8px;
   white-space: nowrap;
 }
@@ -287,20 +324,38 @@ main {
   align-items: center;
   display: flex;
   flex-direction: row;
+  grid-column: 2;
+  grid-row: 3;
   justify-content: flex-end;
   padding: 8px;
 }
 
-.file-tag {
+.file-tag { /* Tag: Code */
   background-color: #1a73e8;
   border-radius: 4px;
   color: #fff;
-  margin-left: 6px;
-  padding: 1px 8px;
   font-size: 0.8rem;
   font-weight: bold;
+  margin-left: 6px;
+  padding: 1px 8px;
 }
 
-.file-tag-1 {
+.file-tag-1 { /* Tag: Deliverable */
+  background-color: #7b1fa2;
+}
+
+.file-tag-2 { /* Tag: Asset */
+  background-color: #0097a7;
+}
+
+.file-tag-3 { /* Tag: In progress */
+  background-color: #ffa000;
+}
+
+.file-tag-4 { /* Tag: Needs review */
   background-color: #d32f2f;
+}
+
+.file-tag-5 { /* Tag: Done */
+  background-color: #388e3c;
 }
