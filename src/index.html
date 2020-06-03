@@ -6,7 +6,7 @@
     <title>UniShare</title>
     <link rel="stylesheet" href="styles/sanitize.css" />
     <link rel="stylesheet" href="styles/main.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -28,22 +28,22 @@
         </nav>
 
         <button class="nav-item nav-button">
-          <i class="material-icons" style="margin-right: 8px;">add</i>
+          <i class="fa fa-plus" aria-hidden="true" style="margin-right: 8px;"></i>
           Add new project
         </button>
 
       </div>
 
       <div class="nav-zone" style="flex-grow: 1">
-        <i class="material-icons nav-item" style="margin-right: 8px;">search</i>
+        <i class="fa fa-search nav-item" aria-hidden="true" style="margin-right: 8px;"></i>
         <input class="nav-search" type="search" placeholder="Search">
       </div>
 
       <div class="nav-zone">
         <button class="nav-item nav-button">
-          <i class="material-icons" style="margin-right: 8px;">account_circle</i>
+          <i class="fa fa-user-circle" aria-hidden="true" style="margin-right: 8px;"></i>
           Danielle Lottridge
-          <i class="material-icons">arrow_drop_down</i>
+          <i class="fa fa-angle-down" aria-hidden="true" style="margin-left: 8px;"></i>
         </button>
       </div>
     </header>
@@ -70,32 +70,55 @@
         </div>
       </section>
 
-      <section class="column col-folders">
+      <section class="column col-tags">
         <div class="container">
-          <h2>Folders</h2>
-          <ul class="folders-list">
-            <li class="folders-item">
-              <button class="folders-btn">
-                <i class="material-icons folders-btn-icon">folder</i>
-                Prototype Source Code
+          <h2>Tags</h2>
+          <ul class="tags-list">
+            <li class="tags-item">
+              <button class="tags-btn">
+                <i class="fa fa-tags fa-lg" aria-hidden="true" style="padding-right: 13px;"></i>
+                Show all
               </button>
             </li>
-            <li class="folders-item">
-              <button class="folders-btn">
-                <i class="material-icons folders-btn-icon">folder</i>
-                Report
+            <li class="tags-item">
+              <button class="tags-btn">
+                <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #1a73e8;"></i>
+                Code
               </button>
             </li>
-            <li class="folders-item">
-              <button class="folders-btn">
-                <i class="material-icons folders-btn-icon">folder</i>
-                Usage Testing Notes
+            <li class="tags-item">
+              <button class="tags-btn">
+                <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #7b1fa2;"></i>
+                Deliverable
               </button>
             </li>
-            <li class="folders-item">
-              <button class="folders-btn">
-                <i class="material-icons folders-btn-icon">folder</i>
-                Memes
+            <li class="tags-item">
+              <button class="tags-btn">
+                <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #0097a7;"></i>
+                Asset
+              </button>
+            </li>
+            <li class="tags-item">
+              <button class="tags-btn">
+                <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #ffa000;"></i>
+                In progress
+              </button>
+            </li>
+            <li class="tags-item">
+              <button class="tags-btn">
+                <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #d32f2f;"></i>
+                Needs review
+              </button>
+            </li>
+            <li class="tags-item">
+              <button class="tags-btn">
+                <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #388e3c;"></i>
+                Done
+              </button>
+            </li>
+            <li class="tags-item">
+              <button class="tags-btn tags-btn-last">
+                Untagged
               </button>
             </li>
           </ul>
@@ -106,27 +129,92 @@
         <div class="container">
           <h2>Files</h2>
 
-          <div class="file-card">
+          <div class="file-card file-card__selected">
             <div class="file-img">
               <img src="images/file-index.png">
             </div>
             <div class="file-header">
               index.html
               <div class="file-header-ppl">
-                <i class="material-icons">account_circle</i>
-                <i class="material-icons" style="margin-left: 4px;">account_circle</i>
+                <div class="file-person-icon" title="Di Kun Ong">DK</div>
+                <div class="file-person-icon" title="Tait Fuller">TF</div>
               </div>
             </div>
             <div class="file-progress">
-              <i class="material-icons file-prog-icon">check_box</i>
+              <i class="fa fa-line-chart file-prog-icon" aria-hidden="true"></i>
               <div class="file-prog-bar">
-                <span class="file-prog-bar-fill" style="width: 25%"></span>
+                <span class="file-prog-bar-fill" style="width: 69%"></span>
               </div>
-              25%
+              69%
             </div>
             <div class="file-tag-area">
               <div class="file-tag">Code</div>
-              <div class="file-tag file-tag-1">Needs review</div>
+              <div class="file-tag file-tag-1">Deliverable</div>
+              <div class="file-tag file-tag-3">In progress</div>
+            </div>
+          </div>
+
+          <div class="file-card">
+            <div class="file-img">
+              <img src="images/file-report.png">
+            </div>
+            <div class="file-header">
+              SE350 Assignment 3 - Gr...
+              <div class="file-header-ppl">
+                <div class="file-person-icon" title="Alex Verkerk">AV</div>
+                <div class="file-person-icon" title="Oliver Chamberlain">OC</div>
+              </div>
+            </div>
+            <div class="file-progress">
+              <i class="fa fa-line-chart file-prog-icon" aria-hidden="true"></i>
+              <div class="file-prog-bar">
+                <span class="file-prog-bar-fill" style="width: 15%"></span>
+              </div>
+              15%
+            </div>
+            <div class="file-tag-area">
+              <div class="file-tag file-tag-1">Deliverable</div>
+              <div class="file-tag file-tag-3">In progress</div>
+            </div>
+          </div>
+
+          <div class="file-card">
+            <div class="file-img">
+              <img src="images/file-invite.png">
+            </div>
+            <div class="file-header">
+              Usage testing invitiat...
+              <div class="file-header-ppl">
+                <div class="file-person-icon" title="Alex Verkerk">AV</div>
+                <div class="file-person-icon" title="Danielle Lottridge">DL</div>
+                <div class="file-person-icon" title="Robert Amor&#10;Gerald Weber">+2</div>
+              </div>
+            </div>
+            <div class="file-progress">
+              <i class="fa fa-line-chart file-prog-icon" aria-hidden="true"></i>
+              <div class="file-prog-bar">
+                <span class="file-prog-bar-fill" style="width: 100%"></span>
+              </div>
+              100%
+            </div>
+            <div class="file-tag-area">
+              <div class="file-tag file-tag-2">Asset</div>
+              <div class="file-tag file-tag-5">Done</div>
+            </div>
+          </div>
+
+          <div class="file-card">
+            <div class="file-img">
+              <img src="images/file-sketch.png">
+            </div>
+            <div class="file-header">
+              design-sketch.jpg
+              <div class="file-header-ppl">
+                <div class="file-person-icon" title="Di Kun Ong">DK</div>
+              </div>
+            </div>
+            <div class="file-tag-area">
+              <div class="file-tag file-tag-2">Asset</div>
             </div>
           </div>
 
