@@ -21,16 +21,22 @@ const tagFiles = {
 const tags = document.querySelectorAll(".tags-btn")
 const files = document.querySelectorAll(".file-card");
 
-function showAllFiles() {
+function indicateTag(tag) {
+    clearTags();
+    tag.classList.add("tags-btn__selected");
+}
+
+function clearTags() {
+    tags.forEach(tag => {tag.classList.remove("tags-btn__selected")});
+}
+
+function showAllFiles(tag) {
+    indicateTag(tag);
     files.forEach(file => {file.style.display = 'inline-grid'});
 }
 
 function hideAllFiles() {
     files.forEach(file => {file.style.display = 'none'});
-}
-
-function clearTags() {
-    tags.forEach(tag => {tag.classList.remove("tags-btn__selected")});
 }
 
 function showTagFiles(tagId) {
@@ -43,7 +49,6 @@ function showTagFiles(tagId) {
 }
 
 function selectTag(tag) {
-    clearTags();
-    tag.classList.add("tags-btn__selected");
+    indicateTag(tag);
     showTagFiles(tag.id);
 }
