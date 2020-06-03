@@ -12,6 +12,8 @@ body {
 
 button {
   align-items: center;
+  background-color: transparent;
+  border: 1px solid #9e9e9e;
   border-radius: 4px;
   display: flex;
   font: 1rem Roboto, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -161,9 +163,7 @@ header {
   margin-left: 24px;
 }
 
-.nav-button {
-  background-color: transparent;
-  border: 1px solid #9e9e9e;
+.nav-btn {
   color: #fff;
 }
 
@@ -205,7 +205,7 @@ main {
   align-content: stretch;
   display: grid;
   grid-template-columns: 350px minmax(420px, auto) 350px;
-  grid-template-rows: 150px auto;
+  grid-template-rows: 150px 54px auto;
   height: 100vh;
   padding-top: 60px;
 }
@@ -215,21 +215,34 @@ main {
 }
 
 .row-timeline {
+  border-bottom: 1px solid #9e9e9e;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.28);
   grid-column: 1 / 4;
   grid-row: 1;
   z-index: 1;
 }
 
-.col-folders {
+.row-toolbar-tags {
+  border-bottom: 1px solid #9e9e9e;
   grid-column: 1;
   grid-row: 2;
+}
+
+.row-toolbar-files {
+  border-bottom: 1px solid #9e9e9e;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.col-tags {
+  grid-column: 1;
+  grid-row: 3;
 }
 
 .col-files {
   border-left: 1px solid #9e9e9e;
   grid-column: 2;
-  grid-row: 2;
+  grid-row: 3;
 }
 
 .col-details {
@@ -237,7 +250,7 @@ main {
   border-left: 1px solid #9e9e9e;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.28);
   grid-column: 3;
-  grid-row: 2;
+  grid-row: 2 / 4;
 }
 
 .container {
@@ -295,6 +308,31 @@ main {
   left: 90.4%;
   font-weight: bold;
   text-align: right;
+}
+
+/*------------------------------------*\
+    #TOOLBAR
+\*------------------------------------*/
+
+.toolbar-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+
+.toolbar-actions {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.toolbar-btn {
+  border: none;
+  color: #1a73e8;
+  font-weight: bold;
 }
 
 /*------------------------------------*\
