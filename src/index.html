@@ -75,49 +75,49 @@
           <h2>Tags</h2>
           <ul class="tags-list">
             <li class="tags-item">
-              <button class="tags-btn tags-btn__selected" onclick="showAllFiles()">
+              <button class="tags-btn tags-btn__selected" id="show-all" onclick="showAllFiles()">
                 <i class="fa fa-tags fa-lg" aria-hidden="true" style="padding-right: 13px;"></i>
                 Show all
               </button>
             </li>
             <li class="tags-item">
-              <button class="tags-btn" onclick="showTagFiles('code')">
+              <button class="tags-btn" id="code" onclick="showTagFiles(this)">
                 <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #1a73e8;"></i>
                 Code
               </button>
             </li>
             <li class="tags-item">
-              <button class="tags-btn" onclick="showTagFiles('deliverable')">
+              <button class="tags-btn" id="deliverable" onclick="showTagFiles(this)">
                 <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #7b1fa2;"></i>
                 Deliverable
               </button>
             </li>
             <li class="tags-item">
-              <button class="tags-btn" onclick="showTagFiles('asset')">
+              <button class="tags-btn" id="asset" onclick="showTagFiles(this)">
                 <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #0097a7;"></i>
                 Asset
               </button>
             </li>
             <li class="tags-item">
-              <button class="tags-btn" onclick="showTagFiles('in-progress')">
+              <button class="tags-btn" id="in-progress" onclick="showTagFiles(this)">
                 <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #ffa000;"></i>
                 In progress
               </button>
             </li>
             <li class="tags-item">
-              <button class="tags-btn" onclick="showTagFiles('needs-review')">
+              <button class="tags-btn" id="needs-review" onclick="showTagFiles(this)">
                 <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #d32f2f;"></i>
                 Needs review
               </button>
             </li>
             <li class="tags-item">
-              <button class="tags-btn" onclick="showTagFiles('done')">
+              <button class="tags-btn" id="done" onclick="showTagFiles(this)">
                 <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #388e3c;"></i>
                 Done
               </button>
             </li>
             <li class="tags-item">
-              <button class="tags-btn tags-btn-last" onclick="showTagFiles('untagged')">
+              <button class="tags-btn tags-btn-last" id="untagged" onclick="showTagFiles(this)">
                 Untagged
               </button>
             </li>

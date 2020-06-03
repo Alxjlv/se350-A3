@@ -28,11 +28,12 @@ function hideAllFiles() {
     files.forEach(file => {file.style.display = 'none'});
 }
 
-function showTagFiles(tagName) {
+function showTagFiles(tag) {
     hideAllFiles();
-    if (tags[tagName] != null) {
-        tags[tagName].forEach(id=> {
-            document.getElementById(id).style.display = 'inline-grid'
+    var tagId = tag.id;
+    if (tags[tagId] != null) {
+        tags[tagId].forEach(fileId=> {
+            document.getElementById(fileId).style.display = 'inline-grid'
         });
     }
 }
