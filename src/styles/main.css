@@ -305,6 +305,25 @@ textarea {
   width: 100%;
 }
 
+.share-addsuggested {
+  align-self: flex-start;
+  font-size: 0.85rem;
+}
+
+.share-addsuggested-heading {
+  margin: 0 0 16px 0;
+}
+
+.share-addsuggested-file {
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.share-addsuggested-file:hover {
+  background-color: rgba(158, 158, 158, 0.2);
+}
+
 .share-sharebtn {
   display: flex;
   grid-column: 2;
