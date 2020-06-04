@@ -162,7 +162,7 @@ textarea {
 }
 
 /*------------------------------------*\
-    #DIALOGS & SHARE
+    #DIALOGS
 \*------------------------------------*/
 
 .dialog {
@@ -177,8 +177,8 @@ textarea {
 }
 
 .dialog-share {
-  height: 480px;
-  margin: -240px 0 0 -350px;
+  height: 700px;
+  margin: -350px 0 0 -350px;
   width: 700px;
 }
 
@@ -196,6 +196,34 @@ textarea {
 .dialog__show {
   display: block;
 }
+
+.dialog-header {
+  margin-bottom: 12px;
+}
+
+/*------------------------------------*\
+    #SHARE
+\*------------------------------------*/
+
+.share-header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.share-header-closebtn {
+  border: none;
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+}
+
+.share-header-closebtn > i {
+  padding: 0 0 4px 5px;
+}
+
+/* Share with someone */
 
 .share-block {
   align-items: center;
@@ -244,6 +272,92 @@ textarea {
   grid-column: 2;
   grid-row: 3;
   justify-content: flex-end;
+}
+
+/* Manage access */
+
+.manage-block {
+  align-items: center;
+  border-bottom: 1px solid #9e9e9e;
+  display: grid;
+  gap: 12px 12px;
+  grid-template-columns: repeat(3, 212px);
+  grid-template-rows: 20px 150px;
+  padding-bottom: 12px;
+}
+
+.manage-list {
+  background-color: rgba(158, 158, 158, 0.2);
+  border-radius: 4px;
+  font-size: 0.8rem;
+  height: 100%;
+  overflow-y: auto;
+  padding: 8px;
+  text-align: center;
+}
+
+.manage-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.manage-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.manage-list::-webkit-scrollbar-thumb {
+  background: #9e9e9e;
+  border-radius: 4px;
+}
+
+.manage-list::-webkit-scrollbar-thumb:hover {
+  background: #757575;
+}
+
+.manage-list::-webkit-scrollbar-thumb:active {
+  background: #343a40;
+}
+
+.manage-list-placeholder {
+  line-height: 134px;
+  user-select: none;
+}
+
+.manage-list-person {
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2px;
+  padding: 4px;
+}
+
+.manage-list-person:hover {
+  background-color: rgba(158, 158, 158, 0.35);
+}
+
+.manage-list-name {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.manage-list-delete {
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.manage-list-delete:hover {
+  background-color: rgba(158, 158, 158, 0.5);
+}
+
+.manage-list-delete:active {
+  background-color: rgba(158, 158, 158, 0.65);
+}
+
+.manage-list-delete > .fa {
+  padding: 3px 5.8px 5px 5.8px;
 }
 
 /*------------------------------------*\

@@ -61,7 +61,13 @@
 
     <div class="dialog dialog-share">
       <div class="container">
-        <h2>Share with someone</h2>
+        <div class="share-header">
+          <h2 class="dialog-header">Share with someone</h2>
+          <button class="share-header-closebtn">
+            <i class="fa fa-times fa-lg" aria-hidden="true"></i>
+          </button>
+        </div>
+        
         <div class="share-block">
           <div class="share-input-person">
             <input type="text" placeholder="Type a name or UPI">
@@ -88,6 +94,66 @@
             </button>
           </div>
         </div>
+
+        <h2 class="dialog-header">Manage access</h2>
+        <div class="manage-block">
+          <h5>CAN EDIT</h5>
+          <h5>CAN COMMENT</h5>
+          <h5>CAN VIEW</h5>
+          <div class="manage-list">
+            <div class="manage-list-person">
+              <div class="manage-list-name">
+                <div class="person person-large" title="Alex Verkerk">AV</div>Alex Verkerk
+              </div>
+            </div>
+            <div class="manage-list-person">
+              <div class="manage-list-name">
+                <div class="person person-large" title="Di Kun Ong">DK</div>Di Kun Ong
+              </div>
+              <div class="manage-list-delete">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="manage-list-person">
+              <div class="manage-list-name">
+                <div class="person person-large" title="Oliver Chamberlain">OC</div>Oliver Chamberlain
+              </div>
+              <div class="manage-list-delete">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="manage-list-person">
+              <div class="manage-list-name">
+                <div class="person person-large" title="Tait Fuller">TF</div>Tait Fuller
+              </div>
+              <div class="manage-list-delete">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div class="manage-list">
+            <div class="manage-list-person">
+              <div class="manage-list-name">
+                <div class="person person-large" title="Danielle Lottridge">AV</div>Danielle Lottridge
+              </div>
+              <div class="manage-list-delete">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="manage-list-person">
+              <div class="manage-list-name">
+                <div class="person person-large" title="Gerald Weber">GW</div>Gerald Weber
+              </div>
+              <div class="manage-list-delete">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div class="manage-list">
+            <div class="manage-list-placeholder">No persons added.</div>
+          </div>
+        </div>
+        
       </div>
     </div>
     <div class="dialog-background"></div>
