@@ -171,11 +171,9 @@ textarea {
 \*------------------------------------*/
 
 .dialog {
-  animation: dialog--fadein 0.4s ease;
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
-  display: none;
   left: 50%;
   position: fixed;
   top: 50%;
@@ -183,6 +181,8 @@ textarea {
 }
 
 .dialog-share {
+  animation: dialog--fadein 0.4s ease;
+  display: none;
   height: 692px;
   margin: -346px 0 0 -350px;
   width: 700px;
@@ -198,6 +198,37 @@ textarea {
   top: 0;
   width: 100%;
   z-index: 13;
+}
+
+.dialog-success {
+  animation: dialog-success--fadein 1s ease;
+  background-color: #343a40;
+  color: #fff;
+  display: none;
+  top: 90%;
+  padding: 4px;
+}
+
+.dialog-success-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.dialog-success-msg {
+  margin: 0 16px;
+}
+
+.dialog-success-closebtn {
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  height: 48px;
+  width: 48px;
+}
+
+.dialog-success-closebtn > .fa {
+  padding: 1px 0 3px 6px;
 }
 
 .dialog__show {
@@ -226,7 +257,7 @@ textarea {
   width: 48px;
 }
 
-.share-header-closebtn > i {
+.share-header-closebtn > .fa {
   padding: 1px 0 3px 6px;
 }
 
@@ -896,6 +927,20 @@ main::before {
     
     to {
         opacity: 1;
+    }
+    
+}
+
+@keyframes dialog-success--fadein {
+    
+    from {
+        opacity: 0;
+        margin-top: 100px;
+    }
+    
+    to {
+        opacity: 1;
+        margin-top: 0;
     }
     
 }
