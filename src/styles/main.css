@@ -43,6 +43,11 @@ select {
   padding: 0 12px;
 }
 
+select > option {
+  background-color: #fff;
+  color: #222;
+}
+
 textarea {
   background-color: rgba(158, 158, 158, 0.2);
   border: none;
@@ -177,8 +182,8 @@ textarea {
 }
 
 .dialog-share {
-  height: 700px;
-  margin: -350px 0 0 -350px;
+  height: 692px;
+  margin: -346px 0 0 -350px;
   width: 700px;
 }
 
@@ -198,7 +203,7 @@ textarea {
 }
 
 .dialog-header {
-  margin-bottom: 12px;
+  margin: 12px 0;
 }
 
 /*------------------------------------*\
@@ -220,7 +225,7 @@ textarea {
 }
 
 .share-header-closebtn > i {
-  padding: 0 0 4px 5px;
+  padding: 1px 0 3px 6px;
 }
 
 /* Share with someone */
@@ -358,6 +363,20 @@ textarea {
 
 .manage-list-delete > .fa {
   padding: 3px 5.8px 5px 5.8px;
+}
+
+/* Link sharing */
+
+.link-block {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.link-config {
+  height: 42px;
+  margin-left: 8px;
 }
 
 /*------------------------------------*\
