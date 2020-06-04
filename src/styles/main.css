@@ -175,7 +175,7 @@ textarea {
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
-  /* display: none; */
+  display: none;
   left: 50%;
   position: fixed;
   top: 50%;
@@ -191,7 +191,7 @@ textarea {
 .dialog-background {
   animation: dialog-background--fadein 0.4s ease;
   background: rgba(0, 0, 0, 0.4);
-  /* display: none; */
+  display: none;
   height: 100%;
   left: 0;
   position: fixed;
@@ -448,6 +448,13 @@ main {
   padding-top: 60px;
 }
 
+main::before {
+  box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.28);
+  content: "";
+  grid-row: 1;
+  grid-column: 1 / 4;
+}
+
 .column {
   overflow-x: hidden;
 }
@@ -473,10 +480,17 @@ main {
   background: #343a40;
 }
 
-.row-timeline {
+.row-project {
   border-bottom: 1px solid #9e9e9e;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.28);
-  grid-column: 1 / 4;
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+}
+
+.row-timeline {
+  border-left: 1px solid #9e9e9e;
+  border-bottom: 1px solid #9e9e9e;
+  grid-column: 2 / 4;
   grid-row: 1;
   z-index: 1;
 }
