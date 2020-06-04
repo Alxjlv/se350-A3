@@ -376,7 +376,7 @@ function renderDetailsHTML(fileId) {
         html += '</div>';
         if (details['version-history'].type == 'text') {
             html += '<div class="detail-history-diff">';
-            html += '<span class="detail-history-add">+' + version.additions + '</span>';
+            html += '<span class="detail-history-add">+' + version.additions + '</span> ';
             html += '<span class="detail-history-del">-' + version.deletions + '</span>';
             html += '</div>';
         }
