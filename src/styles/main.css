@@ -639,6 +639,7 @@ main {
 \*------------------------------------*/
 
 .file-card {
+  animation: file--fadein 0.4s ease;
   border: 1px solid #9e9e9e;
   border-radius: 4px;
   cursor: pointer;
@@ -851,4 +852,22 @@ main {
 
 .detail-history-del {
   color: #d32f2f;
+}
+
+/*------------------------------------*\
+    #ANIMATION-KEYFRAMES
+\*------------------------------------*/
+
+@keyframes file--fadein {
+    
+    from {
+        opacity: 0;
+        margin-top: 20px;
+    }
+    
+    to {
+        opacity: 1;
+        margin-top: 0;
+    }
+    
 }
