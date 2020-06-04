@@ -16,7 +16,7 @@ const tagDetails = {
     },
     "asset": {
         "name": "Asset",
-        "colour": "cyan",
+        "colour": "teal",
         "files": [
             "usageTesting",
             "design-sketch.jpg"
@@ -296,7 +296,7 @@ function renderDetailsHTML(fileId) {
 
     html += '<div class="detail-tag-container">';
     details['tags'].forEach(tag => {
-        html += '<div class="tag ' + tagDetails[tag].colour + '"> ' + tagDetails[tag].name + ' <i class="fa fa-times" aria-hidden="true"></i></div>'
+        html += '<div class="tag tag-' + tagDetails[tag].colour + '"> ' + tagDetails[tag].name + ' <i class="fa fa-times" aria-hidden="true"></i></div>'
     });
     html += '<div class="tag tag-add"><i class="fa fa-plus" aria-hidden="true"></i> Add tag... </div>';
     html += '</div>';
