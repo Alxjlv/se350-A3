@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UniShare</title>
+    <link rel="stylesheet" href="styles/sanitize.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="nav-zone">
+
+        <h3>
+          UniShare
+        </h3>
+
+        <nav>
+          <select class="nav-item nav-dropdown">
+            <option value="0">SOFTENG 350 A3</option>
+            <option value="1">SOFTENG 350 A2</option>
+            <option value="2">ENGGEN 303 TGIP</option>
+            <option value="3">ENGGEN 303 5DPC</option>
+            <option value="4">Manage projects...</option>
+          </select>
+        </nav>
+
+        <button class="nav-item nav-btn">
+          <i class="fa fa-plus" aria-hidden="true" style="margin-right: 8px;"></i>
+          Add new project
+        </button>
+
+      </div>
+
+      <div class="nav-zone" style="flex-grow: 1">
+        <i class="fa fa-search nav-item" aria-hidden="true" style="margin-right: 8px;"></i>
+        <input class="nav-search" type="search" placeholder="Search">
+      </div>
+
+      <div class="nav-zone">
+        <button class="nav-item nav-btn">
+          <i class="fa fa-user-circle" aria-hidden="true" style="margin-right: 8px;"></i>
+          Danielle Lottridge
+          <i class="fa fa-angle-down" aria-hidden="true" style="margin-left: 8px;"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="row-timeline">
+        <div class="container">
+          <h2>Project Timeline</h2>
+          <div class="timeline">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-marker"></div>
+            <p class="timeline-label">Today</p>
+
+            <div class="timeline-marker" style="left: 42%;"></div>
+            <p class="timeline-label" style="left: 34%;">Finish prototype design</p>
+
+            <div class="timeline-marker" style="left: 69%;"></div>
+            <p class="timeline-label" style="left: 62%;">Perform user testing</p>
+
+            <div class="timeline-marker timeline-end"></div>
+            <p class="timeline-label timeline-label-end">Project Due</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="row-toolbar-tags">
+        <div class="toolbar-container">
+          <button class="toolbar-btn">
+            <i class="fa fa-pencil" aria-hidden="true" style="margin-right: 8px;"></i>
+            Edit tags
+          </button>
+        </div>
+      </section>
+
+      <section class="row-toolbar-files">
+        <div class="toolbar-container">
+          <button class="toolbar-btn">
+            <i class="fa fa-upload" aria-hidden="true" style="margin-right: 8px;"></i>
+            Upload files
+          </button>
+          <div class="toolbar-actions">
+            <button class="toolbar-btn">
+              <i class="fa fa-user-plus" aria-hidden="true" style="margin-right: 8px;"></i>
+              Share
+            </button>
+            <button class="toolbar-btn">
+              <i class="fa fa-trash" aria-hidden="true" style="margin-right: 8px;"></i>
+              Delete
+            </button>
+            <button class="toolbar-btn">
+              <i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right: 8px;"></i>
+              Rename
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="column col-tags">
+        <div class="container">
+          <h2>Tags</h2>
+          <ul class="tags-list">
+            <li class="tags-item">
+              <button class="tags-btn tags-btn__selected" id="show-all" onclick="showAllFiles(this)">
+                <i class="fa fa-tags fa-lg" aria-hidden="true" style="padding-right: 13px;"></i>
+                Show all
+              </button>
+            </li>
+            <li class="tags-item">
+              <button class="tags-btn" id="code" onclick="selectTag(this)">
+                <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #1a73e8;"></i>
+                Code
+              </button>
+            </li>
+            <li class="tags-item">
+              <button class="tags-btn" id="deliverable" onclick="selectTag(this)">
+                <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #7b1fa2;"></i>
+                Deliverable
+              </button>
+            </li>
+            <li class="tags-item">
+              <button class="tags-btn" id="asset" onclick="selectTag(this)">
+                <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #0097a7;"></i>
+                Asset
+              </button>
+            </li>
+            <li class="tags-item">
+              <button class="tags-btn" id="in-progress" onclick="selectTag(this)">
+                <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #ffa000;"></i>
+                In progress
+              </button>
+            </li>
+            <li class="tags-item">
+              <button class="tags-btn" id="needs-review" onclick="selectTag(this)">
+                <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #d32f2f;"></i>
+                Needs review
+              </button>
+            </li>
+            <li class="tags-item">
+              <button class="tags-btn" id="done" onclick="selectTag(this)">
+                <i class="fa fa-tag fa-lg tags-btn-icon" aria-hidden="true" style="color: #388e3c;"></i>
+                Done
+              </button>
+            </li>
+            <li class="tags-item">
+              <button class="tags-btn tags-btn-last" id="untagged" onclick="selectTag(this)">
+                Untagged
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="column col-files">
+        <div class="container">
+          <h2>Files</h2>
+
+          <div class="file-card file-card__selected" id="index.html" onclick="selectFile(this)">
+            <div class="file-img">
+              <img src="images/file-index.png">
+            </div>
+            <div class="file-header">
+              index.html
+              <div class="persons-container">
+                <div class="person" title="Di Kun Ong">DK</div>
+                <div class="person" title="Tait Fuller">TF</div>
+              </div>
+            </div>
+            <div class="progress-container">
+              <i class="fa fa-line-chart progress-icon" aria-hidden="true"></i>
+              <div class="progress-bar">
+                <span class="progress-bar-fill" style="width: 69%"></span>
+              </div>
+              69%
+            </div>
+            <div class="file-tag-container">
+              <div class="tag">Code</div>
+              <div class="tag tag-purple">Deliverable</div>
+              <div class="tag tag-orange">In progress</div>
+            </div>
+          </div>
+
+          <div class="file-card" id="se350A3" onclick="selectFile(this)">
+            <div class="file-img">
+              <img src="images/file-report.png">
+            </div>
+            <div class="file-header">
+              SE350 Assignment 3 - Gr...
+              <div class="persons-container">
+                <div class="person" title="Alex Verkerk">AV</div>
+                <div class="person" title="Oliver Chamberlain">OC</div>
+              </div>
+            </div>
+            <div class="progress-container">
+              <i class="fa fa-line-chart progress-icon" aria-hidden="true"></i>
+              <div class="progress-bar">
+                <span class="progress-bar-fill" style="width: 15%"></span>
+              </div>
+              15%
+            </div>
+            <div class="file-tag-container">
+              <div class="tag tag-purple">Deliverable</div>
+              <div class="tag tag-orange">In progress</div>
+            </div>
+          </div>
+
+          <div class="file-card" id="usageTesting" onclick="selectFile(this)">
+            <div class="file-img">
+              <img src="images/file-invite.png">
+            </div>
+            <div class="file-header">
+              Usage testing invitiat...
+              <div class="persons-container">
+                <div class="person" title="Alex Verkerk">AV</div>
+                <div class="person" title="Danielle Lottridge">DL</div>
+                <div class="person" title="Robert Amor&#10;Gerald Weber">+2</div>
+              </div>
+            </div>
+            <div class="progress-container">
+              <i class="fa fa-line-chart progress-icon" aria-hidden="true"></i>
+              <div class="progress-bar">
+                <span class="progress-bar-fill" style="width: 100%"></span>
+              </div>
+              100%
+            </div>
+            <div class="file-tag-container">
+              <div class="tag tag-teal">Asset</div>
+              <div class="tag tag-green">Done</div>
+            </div>
+          </div>
+
+          <div class="file-card" id="design-sketch.jpg" onclick="selectFile(this)">
+            <div class="file-img">
+              <img src="images/file-sketch.png">
+            </div>
+            <div class="file-header">
+              design-sketch.jpg
+              <div class="persons-container">
+                <div class="person" title="Di Kun Ong">DK</div>
+              </div>
+            </div>
+            <div class="file-tag-container">
+              <div class="tag tag-teal">Asset</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="column col-details">
+        <div class="detail-preview">No preview available.</div>
+
+        <div class="container">
+          <h3 class="detail-filename">index.html</h3>
+          <div class="detail-block">
+            <div class="detail-tag-container">
+              <div class="tag">
+                Code
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </div>
+              <div class="tag tag-purple">
+                Deliverable
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </div>
+              <div class="tag tag-orange">
+                In progress
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </div>
+              <div class="tag tag-add">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                Add tag...
+              </div>
+            </div>
+
+            <div class="detail-attribute">
+              <div class="detail-attr-label">Type</div>
+              <div class="detail-attr-data">HTML Document</div>
+            </div>
+            <div class="detail-attribute">
+              <div class="detail-attr-label">Size</div>
+              <div class="detail-attr-data">420.69 KB</div>
+            </div>
+            <div class="detail-attribute">
+              <div class="detail-attr-label">Date modified</div>
+              <div class="detail-attr-data">3 Jun 2020 10:09 pm</div>
+            </div>
+            <div class="detail-attribute">
+              <div class="detail-attr-label">Date created</div>
+              <div class="detail-attr-data">1 Jun 2020 2:26 pm</div>
+            </div>
+            <div class="detail-attribute">
+              <div class="detail-attr-label">Word count</div>
+              <div class="detail-attr-data">—</div>
+            </div>            
+          </div>
+
+          <div class="detail-block">
+            <h5 class="detail-subheading">SHARING</h5>
+
+            <div class="persons-container">
+              <div class="person-separator">
+                <div class="person person-large" title="Di Kun Ong is the owner">DK</div>
+              </div>
+              <div class="person person-large" title="Tait Fuller can edit">TF</div>
+            </div>
+          </div>
+
+          <div class="detail-block">
+            <h5 class="detail-subheading">PROGRESS</h5>
+
+            <div class="progress-container">
+              <i class="fa fa-line-chart progress-icon" aria-hidden="true"></i>
+              <div class="progress-bar">
+                <span class="progress-bar-fill" style="width: 69%"></span>
+              </div>
+              69%
+            </div>
+
+            <div class="detail-task">
+              <input type="checkbox" checked="checked">
+              Design grid structure
+            </div>
+            <div class="detail-task">
+              <input type="checkbox" checked="checked">
+              Navigation bar
+            </div>
+            <div class="detail-task">
+              <input type="checkbox" checked="checked">
+              Timeline section
+            </div>
+            <div class="detail-task">
+              <input type="checkbox" checked="checked">
+              Folders section
+            </div>
+            <div class="detail-task">
+              <input type="checkbox" checked="checked">
+              Files section
+            </div>
+            <div class="detail-task">
+              <input type="checkbox">
+              Replace folders with tags
+            </div>
+            <div class="detail-task">
+              <input type="checkbox">
+              Details section
+            </div>
+            <div class="detail-task">
+              <input type="checkbox">
+              Toolbar
+            </div>
+            <div class="detail-task detail-task-edit">
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+              Edit tasks...
+            </div>
+          </div>
+
+          <div class="detail-block detail-block-last">
+            <h5 class="detail-subheading">VERSION HISTORY</h5>
+            
+            <div class="detail-history">
+              <div class="detail-history-icon">
+                <i class="fa fa-history" aria-hidden="true"></i>
+              </div>
+              <div class="detail-history-time">
+                3 Jun 2020 10:09pm
+              </div>
+              <div class="detail-history-diff">
+                <span class="detail-history-add">+403</span>
+                <span class="detail-history-del">-115</span>
+              </div>
+            </div>
+            <div class="detail-history">
+              <div class="detail-history-icon">
+                <i class="fa fa-history" aria-hidden="true"></i>
+              </div>
+              <div class="detail-history-time">
+                2 Jun 2020 11:54am
+              </div>
+              <div class="detail-history-diff">
+                <span class="detail-history-add">+0</span>
+                <span class="detail-history-del">-55</span>
+              </div>
+            </div>
+            <div class="detail-history">
+              <div class="detail-history-icon">
+                <i class="fa fa-history" aria-hidden="true"></i>
+              </div>
+              <div class="detail-history-time">
+                2 Jun 2020 12:42am
+              </div>
+              <div class="detail-history-diff">
+                <span class="detail-history-add">+98</span>
+                <span class="detail-history-del">-14</span>
+              </div>
+            </div>
+            <div class="detail-history">
+              <div class="detail-history-icon">
+                <i class="fa fa-history" aria-hidden="true"></i>
+              </div>
+              <div class="detail-history-time">
+                1 Jun 2020 2:26pm
+              </div>
+              <div class="detail-history-diff">
+                <span class="detail-history-add">+222</span>
+                <span class="detail-history-del">-0</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
