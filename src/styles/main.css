@@ -115,23 +115,23 @@ button:hover {
   padding: 1px 8px 1px 4px;
 }
 
-.tag-1 { /* Tag: Deliverable */
+.tag-purple { /* Tag: Deliverable */
   background-color: #7b1fa2;
 }
 
-.tag-2 { /* Tag: Asset */
+.tag-teal { /* Tag: Asset */
   background-color: #0097a7;
 }
 
-.tag-3 { /* Tag: In progress */
+.tag-orange { /* Tag: In progress */
   background-color: #ffa000;
 }
 
-.tag-4 { /* Tag: Needs review */
+.tag-red { /* Tag: Needs review */
   background-color: #d32f2f;
 }
 
-.tag-5 { /* Tag: Done */
+.tag-green { /* Tag: Done */
   background-color: #388e3c;
 }
 
