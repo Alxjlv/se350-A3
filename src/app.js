@@ -122,22 +122,22 @@ const fileDetails = {
             "type": "text",
                 "versions": [
                 {
-                    "date": "3 Jun 2020 10:09pm",
+                    "date": "3 Jun 2020 10:09 pm",
                     "additions": "403",
                     "deletions": "115"
                 },
                 {
-                    "date": "2 Jun 2020 11:54am",
+                    "date": "2 Jun 2020 11:54 am",
                     "additions": "0",
                     "deletions": "55"
                 },
                 {
-                    "date": "2 Jun 2020 12:42am",
+                    "date": "2 Jun 2020 12:42 am",
                     "additions": "98",
                     "deletions": "14"
                 },
                 {
-                    "date": "1 Jun 2020 2:26pm",
+                    "date": "1 Jun 2020 2:26 pm",
                     "additions": "222",
                     "deletions": "0"
                 }
@@ -145,7 +145,7 @@ const fileDetails = {
         }
     },
     "se350A3": {
-        "filename": "SE350 Assignment 3  - Group 1.docx",
+        "filename": "SE350 Assignment 3 - Group 1.docx",
         "preview-image": null,
         "tags": [
             "deliverable",
@@ -153,20 +153,20 @@ const fileDetails = {
         ],
         "type": "Microsoft Word Document",
         "size": "89.40 KB",
-        "date-modified": "5 Jun 2020 12:45pm",
-        "date-created": "1 Jun 2020 3:42pm",
+        "date-modified": "5 Jun 2020 12:45 pm",
+        "date-created": "1 Jun 2020 3:42 pm",
         "word-count": "1917",
         "sharing": [
             [
                 {
                     "initial": "AV",
-                    "description": "Alex Verkert is the owner"
+                    "description": "Alex Verkerk is the owner"
                 }
             ],
             [
                 {
                     "initial": "OC",
-                    "description": "Oliver Champerlain can edit"
+                    "description": "Oliver Chamberlain can edit"
                 }
             ]
         ],
@@ -186,7 +186,7 @@ const fileDetails = {
                     "completed": false
                 },
                 {
-                    "name": "Write protostype user description",
+                    "name": "Write prototype user description",
                     "completed": false
                 },
                 {
@@ -207,17 +207,17 @@ const fileDetails = {
             "type": "text",
             "versions": [
                 {
-                    "date": "5 Jun 2020",
+                    "date": "5 Jun 2020 12:45 pm",
                     "additions": "859",
                     "deletions": "56"
                 },
                 {
-                    "date": "4 Jun 2020 8:13pm",
+                    "date": "4 Jun 2020 8:13 pm",
                     "additions": "600",
                     "deletions": "0"
                 },
                 {
-                    "date": "1 Jun 2020 10:30am",
+                    "date": "1 Jun 2020 10:30 am",
                     "additions": "458",
                     "deletions": "0"
                 }
@@ -233,8 +233,8 @@ const fileDetails = {
         ],
         "type": "Microsoft Word Document",
         "size": "25.63 KB",
-        "date-modified": "4 Jun 2020 3:15pm",
-        "date-created": "2 Jun 2020 7:04pm",
+        "date-modified": "4 Jun 2020 3:15 pm",
+        "date-created": "2 Jun 2020 7:04 pm",
         "word-count": "694",
         "sharing": [
             [
@@ -289,12 +289,12 @@ const fileDetails = {
             "type": "text",
             "versions": [
                 {
-                    "date": "4 Ju 2020 3:15pm",
+                    "date": "4 Jun 2020 3:15 pm",
                     "additions": "486",
                     "deletions": "27"
                 },
                 {
-                    "date": "2 Jun 2020 7:59pm",
+                    "date": "2 Jun 2020 7:59 pm",
                     "additions": "235",
                     "deletions": "0"
                 }
@@ -309,8 +309,8 @@ const fileDetails = {
         ],
         "type": "JPEG File",
         "size": "2.68 MB",
-        "date-modified": "1 Jun 2020 5:12pm",
-        "date-created": "1 Jun 2020 5:12pm",
+        "date-modified": "1 Jun 2020 5:12 pm",
+        "date-created": "1 Jun 2020 5:12 pm",
         "word-count": "—",
         "sharing": [
             [
@@ -325,7 +325,7 @@ const fileDetails = {
             "type": "binary",
             "versions": [
                 {
-                    "date": "1 Jun 2020 5:12pm",
+                    "date": "1 Jun 2020 5:12 pm",
                     "additions": "",
                     "deletions": ""
                 }
