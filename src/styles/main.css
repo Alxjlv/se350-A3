@@ -585,7 +585,9 @@ main::before {
 \*------------------------------------*/
 
 .timeline {
+  display: flex;
   position: relative;
+  justify-content: space-between;
 }
 
 .timeline-line {
@@ -594,8 +596,26 @@ main::before {
   height: 6px;
   left: 0;
   margin-top: 24px;
-  top: 0;
+  position: absolute;
+  top: -19px;
+  width: 100%;
   z-index: 1;
+}
+
+.timeline-item {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.timeline-item-start {
+  align-items: flex-start;
+}
+
+.timeline-item-end {
+  align-items: flex-end;
+  margin-top: -5px;
 }
 
 .timeline-marker {
@@ -604,9 +624,7 @@ main::before {
   background: #1a73e8;
   width: 16px;
   height: 16px;
-  position: absolute;
-  bottom: -5px;
-  z-index: 2;
+  transition: ease 0.3s;
 }
 
 .timeline-marker:hover {
@@ -614,23 +632,14 @@ main::before {
   transition: ease 0.3s;
 }
 
-.timeline-end {
+.timeline-marker-end {
   border-radius: 12px;
-  left: 97.2%;
   width: 24px;
   height: 24px;
-  bottom: -9px;
 }
 
 .timeline-label {
-  position: absolute;
-  z-index: 0;
-}
-
-.timeline-label-end {
-  left: 90.4%;
-  font-weight: bold;
-  text-align: right;
+  margin-top: 8px;
 }
 
 /*------------------------------------*\
