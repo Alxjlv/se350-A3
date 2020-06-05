@@ -66,7 +66,7 @@
       <div class="container">
         <div class="share-header">
           <h2 class="dialog-header">Share with someone</h2>
-          <button class="share-header-closebtn">
+          <button class="share-header-closebtn" onclick="closeShareDialog()">
             <i class="fa fa-times fa-lg" aria-hidden="true"></i>
           </button>
         </div>
@@ -92,7 +92,7 @@
             </label>
           </div>
           <div class="share-sharebtn">
-            <button class="toolbar-btn">
+            <button class="toolbar-btn" onclick="submitShareDialog()">
               <i class="fa fa-share" aria-hidden="true" style="margin-right: 8px;"></i>
               Share
             </button>
@@ -189,7 +189,7 @@
         <div class="dialog-success-msg">
           File shared successfully!
         </div>
-        <button class="dialog-success-closebtn">
+        <button class="dialog-success-closebtn" onclick="closeSuccessDialog()">
           <i class="fa fa-times fa-lg" aria-hidden="true"></i>
         </button>
       </div>
@@ -253,7 +253,7 @@
             Upload files
           </button>
           <div class="toolbar-actions">
-            <button class="toolbar-btn">
+            <button class="toolbar-btn" onClick="openShareDialog()">
               <i class="fa fa-user-plus" aria-hidden="true" style="margin-right: 8px;"></i>
               Share
             </button>

@@ -1,6 +1,10 @@
 const tags = document.querySelectorAll(".tags-btn")
 const files = document.querySelectorAll(".file-card");
 
+const shareDialog = document.getElementsByClassName("dialog-share")[0];
+const dialogBackground = document.getElementsByClassName("dialog-background")[0];
+const successDialog = document.getElementsByClassName("dialog-success")[0];
+
 const tagDetails = {
     "code": {
         "name": "Code",
@@ -393,4 +397,24 @@ function selectFile(file) {
     file.classList.add("file-card__selected");
 
     renderDetailsHTML(file.id);
+}
+
+function openShareDialog() {
+    shareDialog.classList.add("dialog__show");
+    dialogBackground.classList.add("dialog__show");
+}
+
+function closeShareDialog() {
+    shareDialog.classList.remove("dialog__show");
+    dialogBackground.classList.remove("dialog__show");
+}
+
+function submitShareDialog() {
+    closeShareDialog();
+    successDialog.classList.add("dialog__show");
+    setTimeout(closeSuccessDialog, 5000);
+}
+
+function closeSuccessDialog() {
+    successDialog.classList.remove("dialog__show");
 }
