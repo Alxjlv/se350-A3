@@ -642,6 +642,10 @@ main::before {
   margin-top: 8px;
 }
 
+.timeline-label-end {
+  font-weight: bold;
+}
+
 /*------------------------------------*\
     #TOOLBAR
 \*------------------------------------*/
