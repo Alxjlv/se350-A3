@@ -817,10 +817,9 @@ main::before {
 }
 
 .detail-preview > img {
-  border-radius: 3px 0 0 3px;
   display: block;
   max-height: 100%;
-  max-width: 100%;
+  width: 100%;
 }
 
 .detail-block {
