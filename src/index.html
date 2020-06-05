@@ -12,7 +12,7 @@
     <!--Roboto is the updated version of the RobotoDraft font provided in the Assignment3_base.html.
         Both are hosted on the same site, so we decided it was appropriate to use the
         updated version, which is significantly better.-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,400;0,700;1,400;1,700">
 
     <!--Font Awesome 4.7 is provided in the Assignment3_base.html.-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -66,7 +66,7 @@
       <div class="container">
         <div class="share-header">
           <h2 class="dialog-header">Share with someone</h2>
-          <button class="share-header-closebtn">
+          <button class="share-header-closebtn" onclick="closeShareDialog()">
             <i class="fa fa-times fa-lg" aria-hidden="true"></i>
           </button>
         </div>
@@ -92,7 +92,7 @@
             </label>
           </div>
           <div class="share-sharebtn">
-            <button class="toolbar-btn">
+            <button class="toolbar-btn" onclick="submitShareDialog()">
               <i class="fa fa-share" aria-hidden="true" style="margin-right: 8px;"></i>
               Share
             </button>
@@ -189,7 +189,7 @@
         <div class="dialog-success-msg">
           File shared successfully!
         </div>
-        <button class="dialog-success-closebtn">
+        <button class="dialog-success-closebtn" onclick="closeSuccessDialog()">
           <i class="fa fa-times fa-lg" aria-hidden="true"></i>
         </button>
       </div>
@@ -253,7 +253,7 @@
             Upload files
           </button>
           <div class="toolbar-actions">
-            <button class="toolbar-btn">
+            <button class="toolbar-btn" onClick="openShareDialog()">
               <i class="fa fa-user-plus" aria-hidden="true" style="margin-right: 8px;"></i>
               Share
             </button>
@@ -423,7 +423,9 @@
 
       <!--Details of selected files-->
       <section class="column col-details">
-        <div class="detail-preview">No preview available.</div>
+        <div class="detail-preview">
+          <img class="detail-preview-img" src="images/preview-index.png">
+        </div>
 
         <div class="container">
           <h3 class="detail-filename">index.html</h3>
