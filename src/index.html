@@ -4,12 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>UniShare</title>
-    <link rel="stylesheet" href="styles/sanitize.css" />
-    <link rel="stylesheet" href="styles/main.css" />
+
+    <!--sanitize.css is a CSS reset/normalize obtained from https://csstools.github.io/sanitize.css/
+        Used with Gerald's permission - see Piazza @98-->
+    <link rel="stylesheet" href="styles/sanitize.css">
+
+    <!--Roboto is the updated version of the RobotoDraft font provided in the Assignment3_base.html.
+        Both are hosted on the same site, so we decided it was appropriate to use the
+        updated version, which is significantly better.-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+    <!--Font Awesome 4.7 is provided in the Assignment3_base.html.-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="styles/main.css">
   </head>
 
   <body>
+
+    <!-- Navigation bar-->
     <header>
       <div class="nav-zone">
 
@@ -48,28 +61,181 @@
       </div>
     </header>
 
+    <!--Share dialog. This only appears when the Share button is clicked.-->
+    <div class="dialog dialog-share">
+      <div class="container">
+        <div class="share-header">
+          <h2 class="dialog-header">Share with someone</h2>
+          <button class="share-header-closebtn">
+            <i class="fa fa-times fa-lg" aria-hidden="true"></i>
+          </button>
+        </div>
+        
+        <div class="share-block">
+          <div class="share-input-person">
+            <input type="text" placeholder="Type a name or UPI">
+          </div>
+          <div class="share-input-permission">
+            <select>
+              <option value="0">Can edit</option>
+              <option value="1">Can comment</option>
+              <option value="2">Can view</option>
+            </select>
+          </div>
+          <div class="share-message">
+            <textarea name="message" placeholder="Type a message (optional)"></textarea>
+          </div>
+          <div class="share-addsuggested">
+            <h5 class="share-addsuggested-heading">ALSO SHARE SUGGESTED FILES:</h5>
+            <label class="share-addsuggested-file">
+              <input type="checkbox" style="margin-right: 8px;">design-sketch.jpg
+            </label>
+          </div>
+          <div class="share-sharebtn">
+            <button class="toolbar-btn">
+              <i class="fa fa-share" aria-hidden="true" style="margin-right: 8px;"></i>
+              Share
+            </button>
+          </div>
+        </div>
+
+        <h2 class="dialog-header">Manage access</h2>
+        <div class="manage-block">
+          <h5>CAN EDIT</h5>
+          <h5>CAN COMMENT</h5>
+          <h5>CAN VIEW</h5>
+          <div class="manage-list">
+            <div class="manage-list-person">
+              <div class="manage-list-name">
+                <div class="person person-large" title="Alex Verkerk">AV</div>Alex Verkerk
+              </div>
+            </div>
+            <div class="manage-list-person">
+              <div class="manage-list-name">
+                <div class="person person-large" title="Di Kun Ong">DK</div>Di Kun Ong
+              </div>
+              <div class="manage-list-delete">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="manage-list-person">
+              <div class="manage-list-name">
+                <div class="person person-large" title="Oliver Chamberlain">OC</div>Oliver Chamberlain
+              </div>
+              <div class="manage-list-delete">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="manage-list-person">
+              <div class="manage-list-name">
+                <div class="person person-large" title="Tait Fuller">TF</div>Tait Fuller
+              </div>
+              <div class="manage-list-delete">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div class="manage-list">
+            <div class="manage-list-person">
+              <div class="manage-list-name">
+                <div class="person person-large" title="Danielle Lottridge">AV</div>Danielle Lottridge
+              </div>
+              <div class="manage-list-delete">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="manage-list-person">
+              <div class="manage-list-name">
+                <div class="person person-large" title="Gerald Weber">GW</div>Gerald Weber
+              </div>
+              <div class="manage-list-delete">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div class="manage-list">
+            <div class="manage-list-placeholder">No persons added.</div>
+          </div>
+        </div>
+
+        <h2 class="dialog-header">Link sharing</h2>
+        <div class="link-block">
+          <div class="link-info">
+            <i class="fa fa-link" aria-hidden="true" style="margin-right: 8px;"></i>
+            Link sharing is ON - anyone with the link
+            <select class="link-config">
+              <option value="0">can edit</option>
+              <option value="1">can comment</option>
+              <option value="2">can view</option>
+            </select>
+          </div>
+          <div class="share-sharebtn">
+            <button class="toolbar-btn">
+              <i class="fa fa-clipboard" aria-hidden="true" style="margin-right: 8px;"></i>
+              Copy link
+            </button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!--Dialog background. Used to isolate dialogs from the rest of the UI when they are displayed.-->
+    <div class="dialog-background"></div>
+
+    <!--Success pop-up. Shown to alert the user of a successfuly shared file.-->
+    <div class="dialog dialog-success">
+      <div class="dialog-success-container">
+        <div class="dialog-success-msg">
+          File shared successfully!
+        </div>
+        <button class="dialog-success-closebtn">
+          <i class="fa fa-times fa-lg" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
     <main>
+      <!--Project Information-->
+      <section class="row-project">
+        <h2 style="margin-left: 20px;">SOFTENG 350 Assignment 3</h2>
+        <button class="toolbar-btn" style="margin-left: 8px">
+          <i class="fa fa-external-link" aria-hidden="true" style="margin-right: 8px;"></i>
+          View on Canvas
+        </button>
+      </section>
+
+      <!--Project Timeline-->
       <section class="row-timeline">
         <div class="container">
           <h2>Project Timeline</h2>
           <div class="timeline">
             <div class="timeline-line"></div>
 
-            <div class="timeline-marker"></div>
-            <p class="timeline-label">Today</p>
+            <div class="timeline-item timeline-item-start">
+              <div class="timeline-marker" title="Wednesday 3 June 2020"></div>
+              <div class="timeline-label">Today</div>
+            </div>
 
-            <div class="timeline-marker" style="left: 42%;"></div>
-            <p class="timeline-label" style="left: 34%;">Finish prototype design</p>
+            <div class="timeline-item">
+              <div class="timeline-marker" title="Thursday 4 June 2020"></div>
+              <div class="timeline-label">Finish prototype design</div>
+            </div>
 
-            <div class="timeline-marker" style="left: 69%;"></div>
-            <p class="timeline-label" style="left: 62%;">Perform user testing</p>
+            <div class="timeline-item">
+              <div class="timeline-marker" title="Friday 5 June 2020"></div>
+              <div class="timeline-label">Perform user testing</div>
+            </div>
 
-            <div class="timeline-marker timeline-end"></div>
-            <p class="timeline-label timeline-label-end">Project Due</p>
+            <div class="timeline-item timeline-item-end">
+              <div class="timeline-marker timeline-marker-end" title="Monday 8 June 2020"></div>
+              <div class="timeline-label timeline-label-end">Project Due</div>
+            </div>
           </div>
         </div>
       </section>
 
+      <!--Toolbar for tags-->
       <section class="row-toolbar-tags">
         <div class="toolbar-container">
           <button class="toolbar-btn">
@@ -79,6 +245,7 @@
         </div>
       </section>
 
+      <!--Toolbar for files-->
       <section class="row-toolbar-files">
         <div class="toolbar-container">
           <button class="toolbar-btn">
@@ -102,6 +269,7 @@
         </div>
       </section>
 
+      <!--Tags-->
       <section class="column col-tags">
         <div class="container">
           <h2>Tags</h2>
@@ -157,6 +325,7 @@
         </div>
       </section>
 
+      <!--Files-->
       <section class="column col-files">
         <div class="container">
           <h2>Files</h2>
@@ -219,7 +388,7 @@
               <div class="persons-container">
                 <div class="person" title="Alex Verkerk">AV</div>
                 <div class="person" title="Danielle Lottridge">DL</div>
-                <div class="person" title="Robert Amor&#10;Gerald Weber">+2</div>
+                <div class="person" title="Di Kun Ong&#10;Gerald Weber&#10;Oliver Chamberlain&#10;Tait Fuller">+4</div>
               </div>
             </div>
             <div class="progress-container">
@@ -252,6 +421,7 @@
         </div>
       </section>
 
+      <!--Details of selected files-->
       <section class="column col-details">
         <div class="detail-preview">No preview available.</div>
 

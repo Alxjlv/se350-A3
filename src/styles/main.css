@@ -26,6 +26,37 @@ button:hover {
   cursor: pointer;
 }
 
+input[type=search],
+input[type=text] {
+  background-color: rgba(158, 158, 158, 0.2);
+  border: none;
+  border-radius: 4px;
+  font: 0.9rem Roboto, "Segoe UI", Helvetica, Arial, sans-serif;
+  padding: 12px;
+}
+
+select {
+  background-color: rgba(158, 158, 158, 0.2);
+  border-radius: 4px;
+  border: none;
+  font: 1rem Roboto, "Segoe UI", Helvetica, Arial, sans-serif;
+  padding: 0 12px;
+}
+
+select > option {
+  background-color: #fff;
+  color: #222;
+}
+
+textarea {
+  background-color: rgba(158, 158, 158, 0.2);
+  border: none;
+  border-radius: 4px;
+  font: 0.9rem Roboto, "Segoe UI", Helvetica, Arial, sans-serif;
+  padding: 12px;
+  resize: none;
+}
+
 /* Icons - this is to ensure all Font Awesome icons are square */
 
 .fa {
@@ -136,6 +167,271 @@ button:hover {
 }
 
 /*------------------------------------*\
+    #DIALOGS
+\*------------------------------------*/
+
+.dialog {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  z-index: 15;
+}
+
+.dialog-share {
+  animation: dialog--fadein 0.4s ease;
+  display: none;
+  height: 692px;
+  margin: -346px 0 0 -350px;
+  width: 700px;
+}
+
+.dialog-background {
+  animation: dialog-background--fadein 0.4s ease;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 13;
+}
+
+.dialog-success {
+  animation: dialog-success--fadein 1s ease;
+  background-color: #343a40;
+  color: #fff;
+  display: none;
+  top: 90%;
+  padding: 4px;
+}
+
+.dialog-success-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.dialog-success-msg {
+  margin: 0 16px;
+}
+
+.dialog-success-closebtn {
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  height: 48px;
+  width: 48px;
+}
+
+.dialog-success-closebtn > .fa {
+  padding: 1px 0 3px 6px;
+}
+
+.dialog__show {
+  display: block;
+}
+
+.dialog-header {
+  margin: 12px 0;
+}
+
+/*------------------------------------*\
+    #SHARE
+\*------------------------------------*/
+
+.share-header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.share-header-closebtn {
+  border: none;
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+}
+
+.share-header-closebtn > .fa {
+  padding: 1px 0 3px 6px;
+}
+
+/* Share with someone */
+
+.share-block {
+  align-items: center;
+  border-bottom: 1px solid #9e9e9e;
+  display: grid;
+  gap: 12px 12px;
+  grid-template-columns: 432px 216px;
+  grid-template-rows: 48px 120px 48px;
+  padding-bottom: 12px;
+}
+
+.share-block-last {
+  border: none;
+}
+
+.share-input-person {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.share-input-person > input {
+  width: 100%;
+}
+
+.share-input-permission {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.share-input-permission > select {
+  height: 42px;
+  width: 100%;
+}
+
+.share-input-permission > select:hover {
+  background-color: rgba(158, 158, 158, 0.35);
+}
+
+.share-message > textarea {
+  height: 120px;
+  width: 100%;
+}
+
+.share-addsuggested {
+  align-self: flex-start;
+  font-size: 0.85rem;
+}
+
+.share-addsuggested-heading {
+  margin: 0 0 16px 0;
+}
+
+.share-addsuggested-file {
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.share-addsuggested-file:hover {
+  background-color: rgba(158, 158, 158, 0.2);
+}
+
+.share-sharebtn {
+  display: flex;
+  grid-column: 2;
+  grid-row: 3;
+  justify-content: flex-end;
+}
+
+/* Manage access */
+
+.manage-block {
+  align-items: center;
+  border-bottom: 1px solid #9e9e9e;
+  display: grid;
+  gap: 12px 12px;
+  grid-template-columns: repeat(3, 212px);
+  grid-template-rows: 20px 150px;
+  padding-bottom: 12px;
+}
+
+.manage-list {
+  background-color: rgba(158, 158, 158, 0.2);
+  border-radius: 4px;
+  font-size: 0.8rem;
+  height: 100%;
+  overflow-y: auto;
+  padding: 8px;
+  text-align: center;
+}
+
+.manage-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.manage-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.manage-list::-webkit-scrollbar-thumb {
+  background: #9e9e9e;
+  border-radius: 4px;
+}
+
+.manage-list::-webkit-scrollbar-thumb:hover {
+  background: #757575;
+}
+
+.manage-list::-webkit-scrollbar-thumb:active {
+  background: #343a40;
+}
+
+.manage-list-placeholder {
+  line-height: 134px;
+  user-select: none;
+}
+
+.manage-list-person {
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2px;
+  padding: 4px;
+}
+
+.manage-list-person:hover {
+  background-color: rgba(158, 158, 158, 0.35);
+}
+
+.manage-list-name {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.manage-list-delete {
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.manage-list-delete:hover {
+  background-color: rgba(158, 158, 158, 0.5);
+}
+
+.manage-list-delete:active {
+  background-color: rgba(158, 158, 158, 0.65);
+}
+
+.manage-list-delete > .fa {
+  padding: 3px 5.8px 5px 5.8px;
+}
+
+/* Link sharing */
+
+.link-block {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.link-config {
+  height: 42px;
+  margin-left: 8px;
+}
+
+/*------------------------------------*\
     #NAVBAR
 \*------------------------------------*/
 
@@ -170,12 +466,8 @@ header {
 
 .nav-dropdown {
   background-color: transparent;
-  border-radius: 4px;
-  border: none;
   color: #fff;
-  font: 1rem Roboto, "Segoe UI", Helvetica, Arial, sans-serif;
   height: 48px;
-  padding: 0 12px;
 }
 
 .nav-dropdown:hover {
@@ -188,14 +480,9 @@ header {
 }
 
 .nav-search {
-  background-color: rgba(158, 158, 158, 0.2);
-  border: none;
-  border-radius: 4px;
   color: #fff;
   flex-grow: 1;
-  font: 1rem Roboto, "Segoe UI", Helvetica, Arial, sans-serif;
   max-width: 560px;
-  padding: 12px;
 }
 
 /*------------------------------------*\
@@ -209,6 +496,13 @@ main {
   grid-template-rows: 150px 54px auto;
   height: 100vh;
   padding-top: 60px;
+}
+
+main::before {
+  box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.28);
+  content: "";
+  grid-row: 1;
+  grid-column: 1 / 4;
 }
 
 .column {
@@ -236,10 +530,17 @@ main {
   background: #343a40;
 }
 
-.row-timeline {
+.row-project {
   border-bottom: 1px solid #9e9e9e;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.28);
-  grid-column: 1 / 4;
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+}
+
+.row-timeline {
+  border-left: 1px solid #9e9e9e;
+  border-bottom: 1px solid #9e9e9e;
+  grid-column: 2 / 4;
   grid-row: 1;
   z-index: 1;
 }
@@ -284,7 +585,9 @@ main {
 \*------------------------------------*/
 
 .timeline {
+  display: flex;
   position: relative;
+  justify-content: space-between;
 }
 
 .timeline-line {
@@ -293,8 +596,26 @@ main {
   height: 6px;
   left: 0;
   margin-top: 24px;
-  top: 0;
+  position: absolute;
+  top: -19px;
+  width: 100%;
   z-index: 1;
+}
+
+.timeline-item {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.timeline-item-start {
+  align-items: flex-start;
+}
+
+.timeline-item-end {
+  align-items: flex-end;
+  margin-top: -5px;
 }
 
 .timeline-marker {
@@ -303,9 +624,7 @@ main {
   background: #1a73e8;
   width: 16px;
   height: 16px;
-  position: absolute;
-  bottom: -5px;
-  z-index: 2;
+  transition: ease 0.3s;
 }
 
 .timeline-marker:hover {
@@ -313,23 +632,18 @@ main {
   transition: ease 0.3s;
 }
 
-.timeline-end {
+.timeline-marker-end {
   border-radius: 12px;
-  left: 97.2%;
   width: 24px;
   height: 24px;
-  bottom: -9px;
 }
 
 .timeline-label {
-  position: absolute;
-  z-index: 0;
+  margin-top: 8px;
 }
 
 .timeline-label-end {
-  left: 90.4%;
   font-weight: bold;
-  text-align: right;
 }
 
 /*------------------------------------*\
@@ -404,6 +718,7 @@ main {
 \*------------------------------------*/
 
 .file-card {
+  animation: file--fadein 0.4s ease;
   border: 1px solid #9e9e9e;
   border-radius: 4px;
   cursor: pointer;
@@ -616,4 +931,62 @@ main {
 
 .detail-history-del {
   color: #d32f2f;
+}
+
+/*------------------------------------*\
+    #ANIMATION-KEYFRAMES
+\*------------------------------------*/
+
+@keyframes dialog--fadein {
+    
+    from {
+        opacity: 0;
+        margin-top: -316px;
+    }
+    
+    to {
+        opacity: 1;
+        margin-top: -346px;
+    }
+    
+}
+
+@keyframes dialog-background--fadein {
+    
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+    
+}
+
+@keyframes dialog-success--fadein {
+    
+    from {
+        opacity: 0;
+        margin-top: 100px;
+    }
+    
+    to {
+        opacity: 1;
+        margin-top: 0;
+    }
+    
+}
+
+@keyframes file--fadein {
+    
+    from {
+        opacity: 0;
+        margin-top: 20px;
+    }
+    
+    to {
+        opacity: 1;
+        margin-top: 0;
+    }
+    
 }
