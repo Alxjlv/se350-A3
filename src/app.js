@@ -68,14 +68,18 @@ const fileDetails = {
         "date-created": "1 Jun 2020 2:26 pm",
         "word-count": "—",
         "sharing": [
-            {
-                "initial": "DK",
-                "description": "Di Kun Ong is the owner"
-            },
-            {
-                "initial": "TF",
-                "description": "Tait Fuller can edit"
-            }
+            [
+                {
+                    "initial": "DK",
+                    "description": "Di Kun Ong is the owner"
+                },
+            ],
+            [
+                {
+                    "initial": "TF",
+                    "description": "Tait Fuller can edit"
+                }
+            ]
         ],
         "progress": {
             "percentage": "69%",
@@ -114,7 +118,6 @@ const fileDetails = {
                 }
             ]
         },
-        "version-type": "text",
         "version-history": {
             "type": "text",
                 "versions": [
@@ -142,77 +145,158 @@ const fileDetails = {
         }
     },
     "se350A3": {
-        "filename": "",
+        "filename": "SE350 Assignment 3  - Group 1.docx",
         "preview-image": null,
         "tags": [
-            ""
+            "deliverable",
+            "in-progress"
         ],
-        "type": "",
-        "size": "",
-        "date-modified": "",
-        "date-created": "",
-        "word-count": "",
+        "type": "Microsoft Word Document",
+        "size": "89.40 KB",
+        "date-modified": "5 Jun 2020 12:45pm",
+        "date-created": "1 Jun 2020 3:42pm",
+        "word-count": "1917",
         "sharing": [
-            {
-                "initial": "",
-                "description": "r"
-            }
+            [
+                {
+                    "initial": "AV",
+                    "description": "Alex Verkert is the owner"
+                }
+            ],
+            [
+                {
+                    "initial": "OC",
+                    "description": "Oliver Champerlain can edit"
+                }
+            ]
         ],
         "progress": {
-            "percentage": "%",
+            "percentage": "15%",
             "tasks": [
                 {
-                    "name": "",
+                    "name": "Write outline",
+                    "completed": true
+                },
+                {
+                    "name": "Brainstorm user needs",
+                    "completed": false
+                },
+                {
+                    "name": "Write user needs section",
+                    "completed": false
+                },
+                {
+                    "name": "Write protostype user description",
+                    "completed": false
+                },
+                {
+                    "name": "Design testing protocol",
+                    "completed": false
+                },
+                {
+                    "name": "Write testing section",
+                    "completed": false
+                },
+                {
+                    "name": "Proofread",
                     "completed": false
                 }
             ]
         },
-        "version-type": "text",
         "version-history": {
             "type": "text",
             "versions": [
                 {
-                    "date": "",
-                    "additions": "",
-                    "deletions": ""
+                    "date": "5 Jun 2020",
+                    "additions": "859",
+                    "deletions": "56"
+                },
+                {
+                    "date": "4 Jun 2020 8:13pm",
+                    "additions": "600",
+                    "deletions": "0"
+                },
+                {
+                    "date": "1 Jun 2020 10:30am",
+                    "additions": "458",
+                    "deletions": "0"
                 }
             ]
         }
     },
     "usageTesting": {
-        "filename": "",
+        "filename": "Usage testing invitation.docx",
         "preview-image": null,
         "tags": [
-            ""
+            "asset",
+            "done"
         ],
-        "type": "",
-        "size": "",
-        "date-modified": "",
-        "date-created": "",
-        "word-count": "",
+        "type": "Microsoft Word Document",
+        "size": "25.63 KB",
+        "date-modified": "4 Jun 2020 3:15pm",
+        "date-created": "2 Jun 2020 7:04pm",
+        "word-count": "694",
         "sharing": [
-            {
-                "initial": "",
-                "description": "r"
-            }
+            [
+                {
+                    "initial": "AV",
+                    "description": "Alex Verkerk is the owner"
+                }
+            ],
+            [
+                {
+                    "initial": "DK",
+                    "description": "Di Kun Ong can edit"
+                },
+                {
+                    "initial": "OC",
+                    "description": "Oliver Chamberlain can edit"
+                },
+                {
+                    "initial": "TF",
+                    "description": "Tait Fuller can edit"
+                }
+            ],
+            [
+                {
+                    "initial": "DL",
+                    "description": "Danielle Lottridge can comment"
+                },
+                {
+                    "initial": "GW",
+                    "description": "Gerald Weber can comment"
+                }
+            ]
         ],
         "progress": {
-            "percentage": "%",
+            "percentage": "100%",
             "tasks": [
                 {
-                    "name": "",
-                    "completed": false
+                    "name": "Select user participants",
+                    "completed": true
+                },
+                {
+                    "name": "Write testing invitation",
+                    "completed": true
+                },
+                {
+                    "name": "Proofread",
+                    "completed": true
                 }
             ]
         },
-        "version-type": "text",
         "version-history": {
             "type": "text",
             "versions": [
                 {
-                    "date": "",
-                    "additions": "",
-                    "deletions": ""
+                    "date": "4 Ju 2020 3:15pm",
+                    "additions": "486",
+                    "deletions": "27"
+                },
+                {
+                    "date": "2 Jun 2020 7:59pm",
+                    "additions": "235",
+                    "deletions": "0"
                 }
             ]
         }
@@ -223,23 +307,25 @@ const fileDetails = {
         "tags": [
             "asset"
         ],
-        "type": "",
-        "size": "",
-        "date-modified": "",
-        "date-created": "",
-        "word-count": "",
+        "type": "JPEG File",
+        "size": "2.68 MB",
+        "date-modified": "1 Jun 2020 5:12pm",
+        "date-created": "1 Jun 2020 5:12pm",
+        "word-count": "—",
         "sharing": [
-            {
-                "initial": "DK",
-                "description": "Di Kun Ong is the owner"
-            }
+            [
+                {
+                    "initial": "DK",
+                    "description": "Di Kun Ong is the owner"
+                }
+            ]
         ],
         "progress": null,
         "version-history": {
             "type": "binary",
             "versions": [
                 {
-                    "date": "",
+                    "date": "1 Jun 2020 5:12pm",
                     "additions": "",
                     "deletions": ""
                 }
@@ -336,11 +422,15 @@ function renderDetailsHTML(fileId) {
     html += '<h5 class="detail-subheading">SHARING</h5>';
     html += '<div class="persons-container">';
     var sharing = details.sharing;
-    html += sharing.length > 1 ? '<div class="person-separator">' : '';
-    html += '<div class="person person-large" title="' + sharing[0].description + '">' + sharing[0].initial + '</div>';
-    html += sharing.length > 1 ? '</div>' : '';
-    for (let i = 1; i < sharing.length; i++) {
-        html += '<div class="person person-large" title="' + sharing[i].description + '">' + sharing[i].initial + '</div>';
+    for (let i = 0; i < sharing.length; i++) {
+        for (let j = 0; j < sharing[i].length; j++) {
+            let role = sharing[i][j];
+            let needsSeperator = (j == sharing[i].length - 1) && (i != sharing.length - 1);
+
+            html += needsSeperator ? '<div class="person-separator">' : '';
+            html += '<div class="person person-large" title="' + role.description + '">' + role.initial + '</div>';
+            html += needsSeperator ? '</div>' : '';
+        }
     }
     html += '</div>';
     html += '</div>';
