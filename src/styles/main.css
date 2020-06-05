@@ -235,6 +235,23 @@ textarea {
   display: block;
 }
 
+.dialog-share__hide {
+  animation: dialog--fadeout 0.2s ease;
+  margin-top: -316px;
+  opacity: 0;
+}
+
+.dialog-background__hide {
+  animation: dialog-background--fadeout 0.2s ease;
+  opacity: 0;
+}
+
+.dialog-success__hide {
+  animation: dialog-success--fadeout 0.2s ease;
+  margin-top: 100px;
+  opacity: 0;
+}
+
 .dialog-header {
   margin: 12px 0;
 }
@@ -951,6 +968,20 @@ main::before {
     
 }
 
+@keyframes dialog--fadeout {
+    
+    from {
+        opacity: 1;
+        margin-top: -346px;
+    }
+    
+    to {
+        opacity: 0;
+        margin-top: -316px;
+    }
+    
+}
+
 @keyframes dialog-background--fadein {
     
     from {
@@ -959,6 +990,18 @@ main::before {
     
     to {
         opacity: 1;
+    }
+    
+}
+
+@keyframes dialog-background--fadeout {
+    
+    from {
+        opacity: 1;
+    }
+    
+    to {
+        opacity: 0;
     }
     
 }
@@ -973,6 +1016,20 @@ main::before {
     to {
         opacity: 1;
         margin-top: 0;
+    }
+    
+}
+
+@keyframes dialog-success--fadeout {
+    
+    from {
+        opacity: 1;
+        margin-top: 0;
+    }
+    
+    to {
+        opacity: 0;
+        margin-top: 100px;
     }
     
 }

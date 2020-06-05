@@ -405,8 +405,15 @@ function openShareDialog() {
 }
 
 function closeShareDialog() {
-    shareDialog.classList.remove("dialog__show");
-    dialogBackground.classList.remove("dialog__show");
+    shareDialog.classList.add("dialog-share__hide");
+    dialogBackground.classList.add("dialog-background__hide");
+    setTimeout(() => {
+        shareDialog.classList.remove("dialog__show");
+        dialogBackground.classList.remove("dialog__show");
+        shareDialog.classList.remove("dialog-share__hide");
+        dialogBackground.classList.remove("dialog-background__hide");
+    }, 200);
+    
 }
 
 function submitShareDialog() {
@@ -416,5 +423,10 @@ function submitShareDialog() {
 }
 
 function closeSuccessDialog() {
-    successDialog.classList.remove("dialog__show");
+    successDialog.classList.add("dialog-success__hide");
+    setTimeout(() => {
+        successDialog.classList.remove("dialog__show");
+        successDialog.classList.remove("dialog-success__hide");
+    }, 200);
+    
 }
