@@ -56,7 +56,7 @@ const tagDetails = {
 const fileDetails = {
     "index.html": {
         "filename": "index.html",
-        "preview-image": null,
+        "preview-image": "images/preview-index.png",
         "tags": [
             "code",
             "deliverable",
@@ -146,7 +146,7 @@ const fileDetails = {
     },
     "se350A3": {
         "filename": "SE350 Assignment 3 - Group 1.docx",
-        "preview-image": null,
+        "preview-image": "images/preview-report.png",
         "tags": [
             "deliverable",
             "in-progress"
@@ -226,7 +226,7 @@ const fileDetails = {
     },
     "usageTesting": {
         "filename": "Usage testing invitation.docx",
-        "preview-image": null,
+        "preview-image": "images/preview-invite.png",
         "tags": [
             "asset",
             "done"
@@ -303,7 +303,7 @@ const fileDetails = {
     },
     "design-sketch.jpg": {
         "filename": "design-sketch.jpg",
-        "preview-image": null,
+        "preview-image": "images/preview-sketch.png",
         "tags": [
             "asset"
         ],
@@ -375,8 +375,7 @@ function renderDetailsHTML(fileId) {
     if (details['preview-image'] == null) {
         html += '<div class="detail-preview">No preview available.</div>';
     } else {
-        // TODO
-        html += '<div class="detail-preview">No preview available.</div>';
+        html += '<img class="detail-preview-img" src="' + details['preview-image'] + '">';
     }
     html += '<div class="container">';
 
