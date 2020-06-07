@@ -16,7 +16,10 @@ const tagDetails = {
     "deliverable": {
         "name": "Deliverable",
         "colour": "purple",
-        "files": null
+        "files": [
+            "index.html",
+            "se350A3"
+        ]
     },
     "asset": {
         "name": "Asset",
