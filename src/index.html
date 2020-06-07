@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!--SOFTENG 350 Assignment 3, Group 1
+      Oliver Chamberlain, Tait Fuller, Di Kun Ong, Alex Verkerk
+
+      To guarantee the best experience, this prototype should be viewed
+      in the latest version of Chrome (version 83), as this is where it was most thoroughly tested.
+      Theoretically, though, it should work well in any browser that supports CSS Grid
+      (released in mid-2017 onwards), and perfectly in any version of Chrome since that date.
+  -->
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -64,6 +73,8 @@
     <!--Share dialog. This only appears when the Share button is clicked.-->
     <div class="dialog dialog-share">
       <div class="container">
+
+        <!--Share with someone-->
         <div class="share-header">
           <h2 class="dialog-header">Share with someone</h2>
           <button class="share-header-closebtn" onclick="closeShareDialog()">
@@ -99,6 +110,7 @@
           </div>
         </div>
 
+        <!--Manage access-->
         <h2 class="dialog-header">Manage access</h2>
         <div class="manage-block">
           <h5>CAN EDIT</h5>
@@ -158,6 +170,7 @@
           </div>
         </div>
 
+        <!--Link sharing-->
         <h2 class="dialog-header">Link sharing</h2>
         <div class="link-block">
           <div class="link-info">
@@ -330,6 +343,7 @@
         <div class="container">
           <h2>Files</h2>
 
+          <!--File: index.html-->
           <div class="file-card file-card__selected" id="index.html" onclick="selectFile(this)">
             <div class="file-img">
               <img src="images/file-index.png">
@@ -355,6 +369,7 @@
             </div>
           </div>
 
+          <!--File: SE350 Assignment 3 - Group 1.docx-->
           <div class="file-card" id="se350A3" onclick="selectFile(this)">
             <div class="file-img">
               <img src="images/file-report.png">
@@ -379,6 +394,7 @@
             </div>
           </div>
 
+          <!--File: Usage testing invitation.docx-->
           <div class="file-card" id="usageTesting" onclick="selectFile(this)">
             <div class="file-img">
               <img src="images/file-invite.png">
@@ -404,6 +420,7 @@
             </div>
           </div>
 
+          <!--File: design-sketch.jpg-->
           <div class="file-card" id="design-sketch.jpg" onclick="selectFile(this)">
             <div class="file-img">
               <img src="images/file-sketch.png">
@@ -423,13 +440,21 @@
 
       <!--Details of selected files-->
       <section class="column col-details">
+
+        <!--By default, the details for index.html are loaded.
+            The HTML for the details for other files is dynamically loaded from app.js.-->
+        
+        <!--File preview image-->
         <div class="detail-preview">
           <img class="detail-preview-img" src="images/preview-index.png">
         </div>
 
         <div class="container">
+          <!--Filename-->
           <h3 class="detail-filename">index.html</h3>
           <div class="detail-block">
+
+            <!--File tags-->
             <div class="detail-tag-container">
               <div class="tag">
                 Code
@@ -449,6 +474,7 @@
               </div>
             </div>
 
+            <!--File metadata-->
             <div class="detail-attribute">
               <div class="detail-attr-label">Type</div>
               <div class="detail-attr-data">HTML Document</div>
@@ -471,6 +497,7 @@
             </div>            
           </div>
 
+          <!--File sharing settings-->
           <div class="detail-block">
             <h5 class="detail-subheading">SHARING</h5>
 
@@ -482,6 +509,7 @@
             </div>
           </div>
 
+          <!--File progress tracking-->
           <div class="detail-block">
             <h5 class="detail-subheading">PROGRESS</h5>
 
@@ -531,6 +559,7 @@
             </div>
           </div>
 
+          <!--File version history-->
           <div class="detail-block detail-block-last">
             <h5 class="detail-subheading">VERSION HISTORY</h5>
             
@@ -587,6 +616,8 @@
         </div>
       </section>
     </main>
+
+    <!--JavaScript is loaded last to decrease load time.-->
     <script src="app.js"></script>
   </body>
 </html>

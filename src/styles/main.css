@@ -1,3 +1,22 @@
+/**
+ * SOFTENG 350 Assignment 3, Group 1
+ * Oliver Chamberlain, Tait Fuller, Di Kun Ong, Alex Verkerk
+ */
+
+/**
+ * The decision was made to NOT use w3.css, as the library did not reflect the aesthetic
+ * we wished to create with our prototype.
+ * Using w3.css would have required the restyling of many of their provided classes,
+ * which would have quickly gotten out of control as w3.css already does not respect
+ * the cascade with its many !important statements.
+ * 
+ * Thus, the following CSS has been written entirely from scratch. No external libraries have been used.
+ * Classes appear in the order that they are first used in the HTML document.
+ * CSS classes have been separated by the purpose of their component, and there is as little
+ * cross-dependency between components as possible to prevent cascade-related issues when
+ * modifying classes.
+ */
+
 body {
   background-color: #FFF;
   color: #222;
@@ -25,6 +44,8 @@ button:hover {
   background-color: rgba(158, 158, 158, 0.2);
   cursor: pointer;
 }
+
+/* User inputs */
 
 input[type=search],
 input[type=text] {
@@ -63,7 +84,7 @@ textarea {
   padding: 4px;
 }
 
-/* People */
+/* People - the icons that appear to represent another user */
 
 .persons-container {
   align-items: center;
@@ -94,7 +115,7 @@ textarea {
   margin-right: 8px;
 }
 
-/* Progress bars */
+/* Progress bars - used for individual file progress tracking */
 
 .progress-container {
   align-items: center;
@@ -200,6 +221,8 @@ textarea {
   z-index: 13;
 }
 
+/* Success toast/pop-up */
+
 .dialog-success {
   animation: dialog-success--fadein 1s ease;
   background-color: #343a40;
@@ -230,6 +253,8 @@ textarea {
 .dialog-success-closebtn > .fa {
   padding: 1px 0 3px 6px;
 }
+
+/* The following classes are dynamically applied via JS to handle dialogs appearing/disappearing */
 
 .dialog__show {
   display: block;
@@ -370,6 +395,7 @@ textarea {
   text-align: center;
 }
 
+/* Custom scrollbar styling - only works on Chrome unfortunately */
 .manage-list::-webkit-scrollbar {
   width: 8px;
 }
@@ -506,6 +532,15 @@ header {
     #PAGE LAYOUT
 \*------------------------------------*/
 
+/* The page is laid out using grid. The outer panes are a fixed size, while the middle Files pane
+ * grows and shrinks 
+ * While not truly responsive, this design works at any screen resolution above 1155 x 700.
+ * The grid is as follows:
+ *    project   timeline    timeline
+ *    toolbar   toolbar     details
+ *    tags      files       details
+ */
+
 main {
   align-content: stretch;
   display: grid;
@@ -515,6 +550,7 @@ main {
   padding-top: 60px;
 }
 
+/* Used to bind the top row (info and timeline) sections to cast a unified box-shadow */
 main::before {
   box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.28);
   content: "";
@@ -522,9 +558,12 @@ main::before {
   grid-column: 1 / 4;
 }
 
+/* Used to hide horizontal scrollbars appearing due to minor overflow caused by element borders */
 .column {
   overflow-x: hidden;
 }
+
+/* Custom scrollbar styling - only works on Chrome unfortunately */
 
 .column::-webkit-scrollbar {
   width: 8px;
@@ -593,6 +632,7 @@ main::before {
   grid-row: 2 / 4;
 }
 
+/* Used in all rows/columns to space content away from the sides */
 .container {
   margin: 0 20px;
 }
@@ -692,6 +732,7 @@ main::before {
     #TAGS
 \*------------------------------------*/
 
+/* The list of filter tags is really an HTML unordered list styled to contain buttons */
 .tags-list {
   align-content: stretch;
   display: flex;
@@ -734,6 +775,12 @@ main::before {
     #FILES
 \*------------------------------------*/
 
+/* Files are laidout using inline-grid so that they reflow to fill as the screen changes size.
+ * The grid is as follows:
+ *    img   header
+ *    img   progress-bar
+ *    img   tags
+ */
 .file-card {
   animation: file--fadein 0.4s ease;
   border: 1px solid #9e9e9e;
@@ -777,6 +824,7 @@ main::before {
   max-width: 100%;
 }
 
+/* The file header contains both the filename text, and the persons with access to that file */
 .file-header {
   align-items: center;
   display: flex;
@@ -807,6 +855,10 @@ main::before {
     #DETAIL
 \*------------------------------------*/
 
+/* The detail pane is a sequence of block elements. As the column width is fixed, 
+ * we can trust that there will be no unexpected overflow issues.
+ */
+
 .detail-preview {
   border-bottom: 1px solid #9e9e9e;
   height: 200px;
@@ -822,6 +874,7 @@ main::before {
   width: 100%;
 }
 
+/* Used to separate "sections" of the detail pane. */
 .detail-block {
   border-bottom: 1px solid #9e9e9e;
   padding-bottom: 18px;
@@ -952,6 +1005,11 @@ main::before {
 /*------------------------------------*\
     #ANIMATION-KEYFRAMES
 \*------------------------------------*/
+
+/* Fade-in and fade-out animations were added to all dynamically appearing elements
+ * to increase the fluidity of the UI.
+ * All animations are applied at 200-400ms duration to maintain efficiency.
+ */
 
 @keyframes dialog--fadein {
     
