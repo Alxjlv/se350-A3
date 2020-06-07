@@ -1,10 +1,11 @@
+// Load elements from DOM
 const tags = document.querySelectorAll(".tags-btn")
 const files = document.querySelectorAll(".file-card");
-
 const shareDialog = document.getElementsByClassName("dialog-share")[0];
 const dialogBackground = document.getElementsByClassName("dialog-background")[0];
 const successDialog = document.getElementsByClassName("dialog-success")[0];
 
+// Initialise data structures
 const tagDetails = {
     "code": {
         "name": "Code",
@@ -52,7 +53,6 @@ const tagDetails = {
         "files": null
     }
 };
-
 const fileDetails = {
     "index.html": {
         "filename": "index.html",
@@ -334,27 +334,33 @@ const fileDetails = {
     }
 };
 
+// Adds the .tags-btn__selected class to a given tag to indicate it as being selected
 function indicateSelectedTag(tag) {
     clearSelectedTags();
     tag.classList.add("tags-btn__selected");
 }
 
+// Removes the .tags-btn__selected class from all tags
 function clearSelectedTags() {
     tags.forEach(tag => {tag.classList.remove("tags-btn__selected")});
 }
 
+// Hides all files
+function hideAllFiles() {
+    files.forEach(file => {file.style.display = 'none'});
+}
+
+// Called by the "Show all" button to select the button and show all files
 function showAllFiles(tag) {
     indicateSelectedTag(tag);
     files.forEach(file => {file.style.display = 'inline-grid'});
 }
 
-function hideAllFiles() {
-    files.forEach(file => {file.style.display = 'none'});
-}
-
-function showTagFiles(tagId) {
+// Called by tag buttons to select the tag and show related files
+function selectTag(tag) {
+    indicateSelectedTag(tag);
     hideAllFiles();
-    var files = tagDetails[tagId].files;
+    var files = tagDetails[tag.id].files;
     if (files != null) {
         files.forEach(fileId => {
             document.getElementById(fileId).style.display = 'inline-grid'
@@ -362,61 +368,61 @@ function showTagFiles(tagId) {
     }
 }
 
-function selectTag(tag) {
-    indicateSelectedTag(tag);
-    showTagFiles(tag.id);
-}
-
+// Renders HTML for the details pane
 function renderDetailsHTML(fileId) {
     var details = fileDetails[fileId];
 
     var html = "";
 
+    // Preview image
     if (details['preview-image'] == null) {
         html += '<div class="detail-preview">No preview available.</div>';
     } else {
         html += '<img class="detail-preview-img" src="' + details['preview-image'] + '">';
     }
+
     html += '<div class="container">';
 
+    // Filename
     html += '<h3 class="detail-filename">' + details['filename'] + '</h3>';
     
+    // Metadata Block
     html += '<div class="detail-block">';
-
+    // Tags
     html += '<div class="detail-tag-container">';
     details['tags'].forEach(tag => {
         html += '<div class="tag tag-' + tagDetails[tag].colour + '"> ' + tagDetails[tag].name + ' <i class="fa fa-times" aria-hidden="true"></i></div>'
     });
     html += '<div class="tag tag-add"><i class="fa fa-plus" aria-hidden="true"></i> Add tag... </div>';
     html += '</div>';
-
+    // Type
     html += '<div class="detail-attribute">';
     html += '<div class="detail-attr-label">Type</div>';
     html += '<div class="detail-attr-data">' + details['type'] + '</div>';
     html += '</div>';
-
+    // Size
     html += '<div class="detail-attribute">';
     html += '<div class="detail-attr-label">Size</div>';
     html += '<div class="detail-attr-data">' + details['size'] + '</div>';
     html += '</div>';
-
+    // Date modified
     html += '<div class="detail-attribute">';
     html += '<div class="detail-attr-label">Date modified</div>';
     html += '<div class="detail-attr-data">' + details['date-modified'] + '</div>';
     html += '</div>';
-
+    // Date created
     html += '<div class="detail-attribute">';
     html += '<div class="detail-attr-label">Date created</div>';
     html += '<div class="detail-attr-data">' + details['date-created'] + '</div>';
     html += '</div>';
-
+    // Word count
     html += '<div class="detail-attribute">';
     html += '<div class="detail-attr-label">Word count</div>';
     html += '<div class="detail-attr-data">' + details['word-count'] + '</div>';
     html += '</div>';
-
     html += '</div>';
 
+    // Sharing block
     html += '<div class="detail-block">';
     html += '<h5 class="detail-subheading">SHARING</h5>';
     html += '<div class="persons-container">';
@@ -434,6 +440,7 @@ function renderDetailsHTML(fileId) {
     html += '</div>';
     html += '</div>';
 
+    // Progress block
     if (details.progress != null) {
         html += '<div class="detail-block">';
         html += '<h5 class="detail-subheading">PROGRESS</h5>';
@@ -457,6 +464,7 @@ function renderDetailsHTML(fileId) {
         html += '</div>';
     }
 
+    // Versions block
     html += '<div class="detail-block detail-block-last">';
     html += '<h5 class="detail-subheading">VERSION HISTORY</h5>';
     details['version-history'].versions.forEach(version => {
@@ -478,9 +486,11 @@ function renderDetailsHTML(fileId) {
     html += '</div>';
 
     html += '</div>';
+
     document.getElementsByClassName("col-details")[0].innerHTML = html;
 }
 
+// Selects a file and displays its data in the details pane
 function selectFile(file) {
     files.forEach(file => {file.classList.remove("file-card__selected")});
     file.classList.add("file-card__selected");
@@ -488,14 +498,17 @@ function selectFile(file) {
     renderDetailsHTML(file.id);
 }
 
+// Opens the sharing dialog
 function openShareDialog() {
     shareDialog.classList.add("dialog__show");
     dialogBackground.classList.add("dialog__show");
 }
 
+// Closes the sharing dialog
 function closeShareDialog() {
     shareDialog.classList.add("dialog-share__hide");
     dialogBackground.classList.add("dialog-background__hide");
+    // Timeout for closing animations
     setTimeout(() => {
         shareDialog.classList.remove("dialog__show");
         dialogBackground.classList.remove("dialog__show");
@@ -505,14 +518,18 @@ function closeShareDialog() {
     
 }
 
+// Submits the sharing dialog
 function submitShareDialog() {
     closeShareDialog();
     successDialog.classList.add("dialog__show");
+    // Timeout for closing animations
     setTimeout(closeSuccessDialog, 5000);
 }
 
+// Closes the success dialog
 function closeSuccessDialog() {
     successDialog.classList.add("dialog-success__hide");
+    // Timeout for autohide and closing animations
     setTimeout(() => {
         successDialog.classList.remove("dialog__show");
         successDialog.classList.remove("dialog-success__hide");
